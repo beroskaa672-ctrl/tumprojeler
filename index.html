@@ -2,40 +2,79 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Uyumluluk İlkesi -->
-    <title>Projelerim | Ana Sayfa</title>
-    <link rel="stylesheet" href="style.css"> <!-- Biçimsellik için CSS bağlıyoruz -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler Merkezi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="site-header">
+        <a class="logo" href="index.html">PROJELER MERKEZİ</a>
+        <nav aria-label="Proje menüsü">
+            <a href="#akademi">Kahraman Akademisi</a>
+            <a href="#mars">Mars Projesi</a>
+            <a href="#sehir">Şehir Tanıtımı</a>
+            <a href="#teknoloji">Teknoloji Blogu</a>
+        </nav>
+    </header>
 
-    <!-- PROJELER ANA MENÜSÜ -->
-    <div class="ust-kisim">
-        <p class="etiket">PROJE MERKEZİ</p>
-        <h1>Çalışmalarıma Hoş Geldiniz</h1>
-        <p>Buradan tüm uygulamalarıma tek bir ana sayfa üzerinden ulaşabilirsiniz.</p>
-    </div>
+    <main>
+        <section class="intro">
+            <p class="eyebrow">DİJİTAL PORTFÖY</p>
+            <h1>Tüm projeler,<br><span>tek bir merkezde.</span></h1>
+            <p class="description">Farklı dünyalara açılan dört web projesini aşağıdan keşfedin.</p>
+        </section>
 
-    <!-- UYGULAMA LİSTESİ -->
-    <main class="projeler">
-        <a class="proje-karti mars-karti" href="mars_projesi/index.html">
-            <span class="proje-numarasi">01</span>
-            <h2>Mars Kolonisi</h2>
-            <p>Kızıl gezegendeki yaşam, keşif ve koloni projesini inceleyin.</p>
-            <span class="proje-linki">Uygulamayı aç &rarr;</span>
-        </a>
+        <section class="project-grid" aria-label="Proje menüleri">
+            <article class="project-card academy" id="akademi">
+                <span class="project-number">01</span>
+                <span class="project-icon" aria-hidden="true">✦</span>
+                <h2>Kahraman Akademisi</h2>
+                <p>Akademi sayfaları</p>
+                <div class="project-links">
+                    <a href="kahraman_akademisi/index.html">Akademi Merkezi</a>
+                    <a href="kahraman_akademisi/kadro.html">Aktif Kadro</a>
+                    <a href="kahraman_akademisi/basvuru.html">Akademiye Katıl</a>
+                </div>
+            </article>
 
-        <a class="proje-karti sehir-karti" href="sehir_tanitim/index.html">
-            <span class="proje-numarasi">02</span>
-            <h2>Şehir Tanıtımı</h2>
-            <p>Şehir tanıtımı uygulamasını ve İstanbul sayfasını görüntüleyin.</p>
-            <span class="proje-linki">Uygulamayı aç &rarr;</span>
-        </a>
+            <article class="project-card mars" id="mars">
+                <span class="project-number">02</span>
+                <span class="project-icon" aria-hidden="true">◉</span>
+                <h2>Mars Projesi</h2>
+                <p>Mars kolonisi sayfaları</p>
+                <div class="project-links">
+                    <a href="mars_projesi/index.html">Ana Sayfa</a>
+                    <a href="mars_projesi/galeri.html">Mars Galerisi</a>
+                    <a href="mars_projesi/basvuru.html">Koloniye Katıl</a>
+                </div>
+            </article>
+
+            <article class="project-card city" id="sehir">
+                <span class="project-number">03</span>
+                <span class="project-icon" aria-hidden="true">⌂</span>
+                <h2>Şehir Tanıtımı</h2>
+                <p>İstanbul hakkında bilgi ve konum</p>
+                <div class="project-links">
+                    <a href="sehir_tanitim/index.html">İstanbul'u Tanı</a>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Haritada Göster</a>
+                </div>
+            </article>
+
+            <article class="project-card technology" id="teknoloji">
+                <span class="project-number">04</span>
+                <span class="project-icon" aria-hidden="true">+</span>
+                <h2>Teknoloji Blogu</h2>
+                <p>Yapay zeka ve robotik içerikleri</p>
+                <div class="project-links">
+                    <a href="teknoloji_blogu/index.html">Blog Ana Sayfası</a>
+                </div>
+            </article>
+        </section>
     </main>
 
-    <!-- ALT BİLGİ (Güvenilirlik ve Güncellik İlkesi) -->
-    <div class="alt-bilgi">
-        <p>Tasarımcı: [bertuğ saka] | Tüm Hakları Saklıdır © 2025</p>
-    </div>
-
+    <footer>
+        <p>© 2025 Projeler Merkezi</p>
+        <p>4 proje · 1 başlangıç noktası</p>
+    </footer>
 </body>
 </html>

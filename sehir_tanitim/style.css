@@ -50,3 +50,7 @@ body {
  
     margin-top: 15px;
 }
+
+.project-switcher { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; padding: 12px 20px; margin: -20px -20px 20px; background: #2c3e50; }
+.project-switcher a { color: white; font-size: 13px; text-decoration: none; }
+.project-switcher a:hover { color: #f1c40f; }

@@ -76,3 +76,7 @@ img {
     color: #5bc0be;
     font-size: 14px;
 }
+
+.project-switcher { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; padding: 12px 20px; background: #111a35; }
+.project-switcher a { color: #dbe7ff; font-size: 13px; text-decoration: none; }
+.project-switcher a:hover { color: #ff4500; }

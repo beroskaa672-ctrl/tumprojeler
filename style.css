@@ -1,158 +1,251 @@
-/* 1. GENEL TİPOGRAFİ VE ARKA PLAN (Biçimsellik) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #18211f;
+    --muted: #68716d;
+    --paper: #f2f0e9;
+    --line: rgba(24, 33, 31, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(135deg, #0b132b 0%, #14213d 55%, #243b53 100%);
-    color: #ffffff; /* Beyaz yazı */
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    margin: 0;
     min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-/* 2. ÜST BİLGİ VE MENÜ TASARIMI */
-.ust-kisim {
-    background-color: #1c2541; /* Biraz daha açık mavi */
-    text-align: center;
-    padding: 20px;
-    border-bottom: 3px solid #ff4500; /* Mars turuncusu çizgi */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 28px 6vw;
+    border-bottom: 1px solid var(--line);
 }
 
-.etiket {
-    color: #5bc0be;
+.logo,
+nav a,
+.eyebrow,
+.project-number,
+footer {
+    font-family: 'DM Mono', monospace;
+}
+
+.logo {
+    color: var(--ink);
     font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin: 0 0 12px;
-}
-
-.ust-kisim p:last-child {
-    margin-bottom: 0;
-}
-
-h1 {
-    margin-top: 0;
-    letter-spacing: 2px; /* Harfler arası boşluk */
-    color: #ff4500;
-}
-
-/* MENÜ LİNKLERİ İŞLEVSELLİĞİ */
-.menu a {
-    color: white;
-    text-decoration: none; /* Linklerin altındaki çizgiyi siler */
-    margin: 0 15px; /* Yanlardan boşluk bırakır */
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s; /* Animasyon süresi */
-}
-
-/* Fare menünün üzerine gelince ne olsun? */
-.menu a:hover {
-    color: #ff4500; /* Yazı Mars rengine dönsün */
-}
-
-/* 3. ANA İÇERİK KUTUSU TASARIMI (Tasarım/Layout) */
-.kutu,
-.projeler {
-    background-color: #1c2541;
-    max-width: 900px; /* Kutunun maksimum genişliği */
-    margin: 40px auto; /* Yukarıdan 40px boşluk bırakıp kutuyu ortalar */
-    padding: 30px;
-    border-radius: 10px; /* Köşeleri yuvarlar */
-    box-shadow: 0px 0px 20px rgba(255, 69, 0, 0.2); /* Etrafına hafif turuncu ışık/gölge verir */
-    text-align: center;
-}
-
-.projeler {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.proje-karti {
-    background-color: #1c2541;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-top: 4px solid #ff4500;
-    border-radius: 10px;
-    color: #ffffff;
-    padding: 28px;
-    text-align: left;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-decoration: none;
-    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
-.proje-karti:hover {
-    border-color: #ff4500;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-    transform: translateY(-5px);
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-.sehir-karti {
-    border-top-color: #5bc0be;
+nav a {
+    color: var(--muted);
+    font-size: 11px;
+    text-decoration: none;
+    transition: color 180ms ease;
 }
 
-.sehir-karti:hover {
-    border-color: #5bc0be;
+nav a:hover,
+nav a:focus-visible {
+    color: var(--ink);
 }
 
-.proje-numarasi {
-    color: #5bc0be;
-    font-size: 13px;
-    font-weight: bold;
+main {
+    width: min(1180px, 88vw);
+    margin: 0 auto;
+}
+
+.intro {
+    padding: 92px 0 66px;
+}
+
+.eyebrow {
+    margin: 0 0 24px;
+    color: #df5e42;
+    font-size: 11px;
     letter-spacing: 2px;
 }
 
-.proje-karti h2 {
-    margin: 14px 0 10px;
+h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(48px, 8vw, 104px);
+    font-weight: 600;
+    letter-spacing: -3px;
+    line-height: 0.94;
 }
 
-.proje-karti p {
-    color: #d8e1e8;
-    line-height: 1.6;
-    min-height: 52px;
+h1 span {
+    color: #a7aaa0;
 }
 
-.proje-linki {
-    color: #ffb199;
-    display: inline-block;
-    font-weight: bold;
-    margin-top: 12px;
+.description {
+    max-width: 400px;
+    margin: 32px 0 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.55;
 }
 
-@media (max-width: 650px) {
-    .projeler {
-        grid-template-columns: 1fr;
-        margin-top: 24px;
-        padding: 20px;
-    }
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding-bottom: 72px;
 }
 
-/* RESİMLERİN AYARI */
-img {
-    width: 90%; /* Resimler kutudan taşmasın */
-    border-radius: 8px;
-    margin-top: 20px;
-    border: 2px solid #ff4500;
-}
-
-/* 4. BUTON TASARIMI */
-.buton {
-    display: inline-block;
-    background-color: #ff4500;
-    color: white;
+.project-card {
+    position: relative;
+    display: flex;
+    min-height: 310px;
+    flex-direction: column;
+    padding: 28px;
+    overflow: hidden;
+    color: var(--ink);
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-.buton:hover {
-    background-color: #cc3700;
+    transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-/* 5. ALT BİLGİ (FOOTER) */
-.alt-bilgi {
-    text-align: center;
-    padding: 20px;
-    color: #5bc0be;
+.project-card h2 {
+    margin: auto 0 10px;
+}
+
+.project-card p {
+    margin: 0 0 18px;
     font-size: 14px;
+}
+
+.project-links {
+    display: grid;
+    gap: 8px;
+    border-top: 1px solid rgba(24, 33, 31, 0.3);
+    padding-top: 14px;
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.project-links a::after {
+    content: '\2192';
+    font-size: 17px;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    text-decoration: underline;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(24, 33, 31, 0.12);
+}
+
+.academy { background: #f2b544; }
+.mars { background: #d96d4f; }
+.city { background: #a8c5bd; }
+.technology { background: #c7c7ef; }
+
+.project-number {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.project-icon {
+    align-self: flex-end;
+    font-size: 46px;
+    line-height: 0.7;
+}
+
+.project-card h2 {
+    max-width: 350px;
+    margin: auto 0 12px;
+    font-size: clamp(27px, 3vw, 42px);
+    letter-spacing: -1.5px;
+    line-height: 1;
+}
+
+.project-card p {
+    max-width: 330px;
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.open-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(24, 33, 31, 0.3);
+    padding-top: 15px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+}
+
+.open-link span {
+    font-size: 21px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 6vw 30px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 10px;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 6vw;
+    }
+
+    nav {
+        justify-content: flex-start;
+        gap: 12px 18px;
+    }
+
+    .intro {
+        padding: 64px 0 44px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 275px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
