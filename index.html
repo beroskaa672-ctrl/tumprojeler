@@ -3,78 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeler Merkezi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projeler Merkezi | Ana Menü</title>
+    <style>
+        body {
+            position: relative;
+            isolation: isolate;
+            overflow-x: hidden;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+        body::before {
+            z-index: -2;
+            inset: -4%;
+            background:
+                linear-gradient(180deg, rgba(4, 10, 14, 0.25), rgba(4, 10, 14, 0.58)),
+                url("tlou-tekne.jpg") center 54% / cover no-repeat;
+            animation: scene-drift 28s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+        body::after {
+            z-index: -1;
+            background:
+                radial-gradient(ellipse at 74% 63%, rgba(150, 205, 215, 0.24), transparent 38%),
+                linear-gradient(110deg, transparent 42%, rgba(204, 226, 215, 0.08) 56%, transparent 70%);
+            mix-blend-mode: screen;
+            animation: water-light 9s ease-in-out infinite alternate;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: header-arrive 0.8s ease-out both;
+        }
+        h1 {
+            color: #58a6ff;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 12px rgba(88, 166, 255, 0.5), 0 0 32px rgba(88, 166, 255, 0.2);
+            animation: title-glow 3.2s ease-in-out infinite alternate;
+        }
+        p {
+            color: #8b949e;
+        }
+        .proje-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .proje-kart {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background-color: rgba(14, 19, 24, 0.8);
+            backdrop-filter: blur(5px);
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .proje-kart::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #58a6ff, #3fb950, transparent);
+            transform: translateX(-100%);
+            transition: transform 0.65s ease;
+        }
+        .proje-kart:hover {
+            border-color: #58a6ff;
+            transform: translateY(-5px);
+            box-shadow: 0 0 24px rgba(88, 166, 255, 0.25), 0 12px 32px rgba(0, 0, 0, 0.35);
+        }
+        .proje-kart:hover::before {
+            transform: translateX(100%);
+        }
+        .proje-kart h3 {
+            color: #58a6ff;
+            margin-top: 0;
+        }
+        .proje-kart p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .buton {
+            display: inline-block;
+            background-color: #238636;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+        .buton:hover {
+            background-color: #2ea043;
+            box-shadow: 0 0 18px rgba(46, 160, 67, 0.45);
+        }
+        .buton:focus-visible {
+            outline: 2px solid #7ee787;
+            outline-offset: 4px;
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 13px;
+            color: #6e7681;
+            padding-top: 40px;
+        }
+        @keyframes title-glow {
+            from { text-shadow: 0 0 10px rgba(88, 166, 255, 0.35), 0 0 24px rgba(88, 166, 255, 0.12); }
+            to { text-shadow: 0 0 16px rgba(88, 166, 255, 0.7), 0 0 38px rgba(88, 166, 255, 0.28); }
+        }
+        @keyframes header-arrive {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scene-drift {
+            from { transform: scale(1.04) translate3d(-0.35%, 0, 0); }
+            to { transform: scale(1.09) translate3d(0.35%, -0.35%, 0); }
+        }
+        @keyframes water-light {
+            from { opacity: 0.45; transform: translateX(-1.5%); }
+            to { opacity: 0.9; transform: translateX(1.5%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <a class="logo" href="index.html">PROJELER MERKEZİ</a>
-        <nav aria-label="Proje menüsü">
-            <a href="#akademi">Kahraman Akademisi</a>
-            <a href="#mars">Mars Projesi</a>
-            <a href="#sehir">Şehir Tanıtımı</a>
-            <a href="#teknoloji">Teknoloji Blogu</a>
-        </nav>
+
+    <header>
+        <h1>PROJELER MERKEZİ</h1>
+        <p>Hazırladığınız tüm web geliştirme projelerine tek bir merkezden erişin.</p>
     </header>
 
-    <main>
-        <section class="intro">
-            <p class="eyebrow">DİJİTAL PORTFÖY</p>
-            <h1>Tüm projeler,<br><span>tek bir merkezde.</span></h1>
-            <p class="description">Farklı dünyalara açılan dört web projesini aşağıdan keşfedin.</p>
-        </section>
+    <main class="proje-grid">
+        <!-- Proje 1: Süper Kahraman Akademisi -->
+        <div class="proje-kart">
+            <h3>Süper Kahraman Akademisi</h3>
+            <p>Aktif kadro, başvuru formu ve özel kahraman raporları içeren ana akademi projesi.</p>
+            <a href="kahraman_akademisi/index.html" class="buton">Projeye Git</a>
+        </div>
 
-        <section class="project-grid" aria-label="Proje menüleri">
-            <article class="project-card academy" id="akademi">
-                <span class="project-number">01</span>
-                <span class="project-icon" aria-hidden="true">✦</span>
-                <h2>Kahraman Akademisi</h2>
-                <p>Akademi sayfaları</p>
-                <div class="project-links">
-                    <a href="kahraman_akademisi/index.html">Akademi Merkezi</a>
-                    <a href="kahraman_akademisi/kadro.html">Aktif Kadro</a>
-                    <a href="kahraman_akademisi/basvuru.html">Akademiye Katıl</a>
-                </div>
-            </article>
+        <!-- Proje 2: Teknoloji Blogu -->
+        <div class="proje-kart">
+            <h3>Teknoloji Blogu</h3>
+            <p>Yapay zeka devrimi ve geleceğin teknolojilerini inceleyen makale blog sayfası.</p>
+            <a href="teknoloji_blogu/index.html" class="buton">Projeye Git</a>
+        </div>
 
-            <article class="project-card mars" id="mars">
-                <span class="project-number">02</span>
-                <span class="project-icon" aria-hidden="true">◉</span>
-                <h2>Mars Projesi</h2>
-                <p>Mars kolonisi sayfaları</p>
-                <div class="project-links">
-                    <a href="mars_projesi/index.html">Ana Sayfa</a>
-                    <a href="mars_projesi/galeri.html">Mars Galerisi</a>
-                    <a href="mars_projesi/basvuru.html">Koloniye Katıl</a>
-                </div>
-            </article>
+        <!-- Proje 3: Şehir Tanıtımı -->
+        <div class="proje-kart">
+            <h3>Şehir Tanıtımı</h3>
+            <p>İstanbul ve şehir kültürü tanıtımına özel modern esnek tasarımlı tanıtım sayfası.</p>
+            <a href="sehir_tanitim/index.html" class="buton">Projeye Git</a>
+        </div>
 
-            <article class="project-card city" id="sehir">
-                <span class="project-number">03</span>
-                <span class="project-icon" aria-hidden="true">⌂</span>
-                <h2>Şehir Tanıtımı</h2>
-                <p>İstanbul hakkında bilgi ve konum</p>
-                <div class="project-links">
-                    <a href="sehir_tanitim/index.html">İstanbul'u Tanı</a>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Haritada Göster</a>
-                </div>
-            </article>
+        <!-- Proje 4: Mars Projesi -->
+        <div class="proje-kart">
+            <h3>Mars Kolonisi Projesi</h3>
+            <p>Kızıl gezegene yolculuk, galeri ve koloniye katılım başvuru formu içeren uzay projesi.</p>
+            <a href="mars_projesi/index.html" class="buton">Projeye Git</a>
+        </div>
 
-            <article class="project-card technology" id="teknoloji">
-                <span class="project-number">04</span>
-                <span class="project-icon" aria-hidden="true">+</span>
-                <h2>Teknoloji Blogu</h2>
-                <p>Yapay zeka ve robotik içerikleri</p>
-                <div class="project-links">
-                    <a href="teknoloji_blogu/index.html">Blog Ana Sayfası</a>
-                </div>
-            </article>
-        </section>
+        <!-- Proje 5: Cosmic Tours -->
+        <div class="proje-kart">
+            <h3>Cosmic Tours</h3>
+            <p>Güneş sistemi boyunca gezegen turlarını keşfedin.</p>
+            <a href="cosmic_tours/index.html" class="buton">Projeye Git</a>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Projeler Merkezi</p>
-        <p>4 proje · 1 başlangıç noktası</p>
+        <p>&copy; 2026 Web Geliştirme Projeleri | Tüm Hakları Saklıdır.</p>
     </footer>
+
 </body>
 </html>
