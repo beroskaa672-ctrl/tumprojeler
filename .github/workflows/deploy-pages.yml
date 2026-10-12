@@ -31,7 +31,7 @@ jobs:
       - name: Prepare website files
         run: |
           mkdir _site
-          find . -mindepth 1 -maxdepth 1 -type d ! -name .git ! -name .vscode ! -name .github -exec cp -R {} _site/ \;
+          find . -mindepth 1 -maxdepth 1 -type d ! -name .git ! -name .vscode ! -name .github ! -name _site -exec cp -R {} _site/ \;
           find . -maxdepth 1 -type f ! -name '.*' ! -name '*.zip' -exec cp {} _site/ \;
 
       - name: Upload website
