@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SineEvren | Popüler Filmler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 SineEvren</h1>
+        <p>Popüler filmleri keşfet, aradığın filmi bul ve fragmanını izle.</p>
+    </header>
+
+    <form id="arama-formu" class="arama-formu" role="search">
+        <label for="film-arama">Film ara</label>
+        <div class="arama-kontrolu">
+            <input id="film-arama" name="query" type="search" placeholder="Film adı yaz…" autocomplete="off">
+            <button type="submit">Ara</button>
+            <button id="arama-temizle" class="arama-temizle" type="button" aria-label="Aramayı temizle" hidden>×</button>
+        </div>
+    </form>
+
+    <p id="veri-durumu" class="veri-durumu" role="status" aria-live="polite"></p>
+    <main id="film-vitrini" class="izgara-yapisi" aria-label="Popüler filmler"></main>
+    <div class="film-yukle-alani">
+        <button id="daha-fazla-yukle" type="button" hidden>Daha Fazla Film Yükle</button>
+    </div>
+
+    <button id="yukari-cik" class="yukari-cik" type="button" aria-label="Sayfanın en üstüne çık">↑</button>
+
+    <div id="film-modal" class="modal-kutu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Film fragmanı">
+        <div class="modal-icerik">
+            <button id="modal-kapat" class="modal-kapat" aria-label="Kapat">×</button>
+            <div class="video-wrap">
+                <iframe id="film-iframe" src="" title="Film Fragmanı" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p id="fragman-mesaj" class="fragman-mesaj" role="status" aria-live="polite" hidden></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Film verileri <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a> API'sinden sağlanmaktadır. TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

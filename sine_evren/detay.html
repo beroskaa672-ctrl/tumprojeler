@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Detayı | SineEvren</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="detay-body" class="detay-sayfasi">
+    <main class="detay-kapsayici">
+        <a class="detay-geri" href="index.html">← Filmlere dön</a>
+        <p id="detay-durumu" class="veri-durumu" role="status" aria-live="polite">Film bilgileri yükleniyor…</p>
+        <article id="film-detayi" class="detay-icerik" hidden>
+            <h2 id="film-basligi"></h2>
+            <p id="film-meta"></p>
+            <p id="film-ozeti" class="detay-ozet"></p>
+            <p id="film-butcesi"></p>
+
+            <section id="fragman-bolumu" class="detay-bolum" hidden>
+                <h3 id="fragman-basligi">Fragman</h3>
+                <iframe id="detay-fragmani" class="detay-video" title="Film fragmanı" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+
+            <section class="detay-bolum">
+                <h3>Oyuncular</h3>
+                <div id="oyuncu-listesi" class="oyuncu-listesi"></div>
+            </section>
+
+            <section class="detay-bolum">
+                <h3>Bunlar da Hoşunuza Gidebilir</h3>
+                <div id="benzer-filmler" class="benzer-filmler"></div>
+            </section>
+        </article>
+    </main>
+    <script src="detay.js"></script>
+</body>
+</html>
