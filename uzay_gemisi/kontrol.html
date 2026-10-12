@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kontrol | Nova-07</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="panel">
+        <p class="ust-etiket">NOVA-07 / SİSTEM YÖNETİMİ</p>
+        <h1>GEMİ KONTROLÜ</h1>
+        <nav aria-label="Sayfa bağlantıları">
+            <a href="index.html">Giriş</a>
+            <a href="personel.html">Personel Verileri</a>
+        </nav>
+        <section class="kontrol-bolumu" aria-labelledby="kalkan-baslik">
+            <h2 id="kalkan-baslik">Kalkan Kontrolü</h2>
+            <div id="kalkanDurumu" class="durum-kutusu kirmizi" aria-live="polite">KALKANLAR DEVRE DIŞI</div>
+            <button type="button" onclick="kalkanYonet('ac')">Kalkanları aç</button>
+            <button type="button" class="ikincil" onclick="kalkanYonet('kapat')">Kalkanları kapat</button>
+        </section>
+        <section class="kontrol-bolumu" aria-labelledby="motor-baslik">
+            <h2 id="motor-baslik">Motor Kontrolü</h2>
+            <div id="motorDurumu" class="durum-kutusu kirmizi" aria-live="polite">MOTORLAR KAPALI</div>
+            <button type="button" onclick="motorYonet(true)">Motorları çalıştır</button>
+            <button type="button" class="ikincil" onclick="motorYonet(false)">Motorları durdur</button>
+        </section>
+        <a class="ana-menu" href="../index.html">Proje merkezine dön</a>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Girişi | KOD KIRICI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="terminal-kutusu">
+        <header>
+            <p class="terminal-etiket">GÜVENLİK SİMÜLASYONU / LAB-01</p>
+            <h1>&gt; SİSTEME SIZILIYOR...</h1>
+            <p>Hedef: Ana Sunucu Veritabanı</p>
+        </header>
+        <section class="islem-alani" aria-label="Simülasyon kontrolü">
+            <div id="ekran" class="sifre-ekrani" aria-live="polite">0000-0000-0000-0000</div>
+            <label for="yuklemeBari">Sızma ilerlemesi</label>
+            <progress id="yuklemeBari" value="0" max="100"></progress>
+            <p id="yuzdeYazi" aria-live="polite">%0 Tamamlandı</p>
+            <button id="baslatBtn" type="button" onclick="kodKirmayiBaslat()">[ SIZMAYI BAŞLAT ]</button>
+        </section>
+        <aside aria-label="Sistem kayıtları">
+            <h2>Sistem kayıtları</h2>
+            <ul id="logListesi">
+                <li>&gt; Sistem dinleniyor...</li>
+            </ul>
+        </aside>
+        <a href="../index.html">Proje merkezine dön</a>
+    </main>
+    <script src="hacker.js"></script>
+</body>
+</html>

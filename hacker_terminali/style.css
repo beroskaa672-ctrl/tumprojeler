@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+    color-scheme: dark;
+    font-family: "Share Tech Mono", "Courier New", monospace;
+    background: #000;
+    color: #00ff66;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 28px 16px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(ellipse at center, rgba(0, 90, 25, 0.19), transparent 70%),
+        #000;
+}
+
+.terminal-kutusu {
+    width: min(100%, 680px);
+    padding: clamp(22px, 5vw, 38px);
+    background: rgba(0, 18, 5, 0.94);
+    border: 1px solid #00b943;
+    box-shadow: 0 0 28px rgba(0, 255, 72, 0.2);
+}
+
+header {
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #007c2a;
+}
+
+.terminal-etiket {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: #80ffa5;
+}
+
+h1 {
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+}
+
+h2 {
+    font-size: 1rem;
+    color: #80ffa5;
+}
+
+.islem-alani {
+    padding: 18px 0;
+}
+
+.sifre-ekrani {
+    overflow-wrap: anywhere;
+    padding: 16px 8px;
+    margin: 10px 0 24px;
+    color: #d5ffdf;
+    background: #001a08;
+    border: 1px solid #00b943;
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.sifre-ekrani.erisildi {
+    color: #fff;
+    background: #08752e;
+}
+
+progress {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    accent-color: #00ff66;
+}
+
+progress::-webkit-progress-bar {
+    background: #18301f;
+}
+
+progress::-webkit-progress-value {
+    background: #00ff66;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    color: #00ff66;
+    background: #000;
+    border: 1px solid #00ff66;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    color: #000;
+    background: #00ff66;
+}
+
+button:disabled {
+    cursor: wait;
+    opacity: 0.75;
+}
+
+ul {
+    height: 120px;
+    overflow-y: auto;
+    padding: 12px 14px 12px 34px;
+    border: 1px dashed #00551c;
+    color: #9cffb4;
+    font-size: 0.88rem;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #80ffa5;
+    text-underline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
