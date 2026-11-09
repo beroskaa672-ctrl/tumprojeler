@@ -13,7 +13,7 @@ final_1297 klasörünü VS Code'da açıp index.html dosyasını Live Server ile
 | Ctrl+F ara | Dosya | Açıklama |
 |---|---|---|
 | /görev1 | index.html | mailto: e-posta taslağı açar; target="_blank" dış siteyi yeni sekmede açar; #kadroBolumu aynı sayfadaki bölüme gider. Okul e-postan varsa mailto: kısmına ekle. |
-| /görev2 | index.html | Siber Kalkan konsept adı, slogan, tanıtım ve üç hizmet kartı. |
+| /görev2 | index.html ve style.css | Konsept, slogan, tanıtım ve üç hizmet kartı; ::first-letter sloganın ilk harfini biçimlendirir. |
 | /görev3 | style.css | ::after başlıklara isim-numara imzası ekler. padding iç boşluktur; dashed border görünür kenarlık verir; sol çizgi 8px kalınlığındadır. |
 | /görev4 | style.css | .uzman-ust-sablon position: relative olur; içteki absolute fotoğraf kartı referans alır. |
 | /görev5 | gorev-formu.html | autofocus, required, datalist, date ve en önemli pattern="1297[A-Z]{2}" kuralı. |

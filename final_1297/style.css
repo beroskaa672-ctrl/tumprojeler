@@ -29,6 +29,7 @@ a{color:inherit}
 .section-space{padding-top:5rem;padding-bottom:5rem}.section-space-sm{margin-top:3rem}
 .section-heading{max-width:720px;margin:0 auto 2.5rem;text-align:center}.section-heading h2,.section-title{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;letter-spacing:-.05em}
 .section-heading>p:last-child,.form-heading>p:last-child{color:var(--muted);line-height:1.8}
+/* GÖREV 2.B /görev2: ::first-letter sloganın ilk harfini büyütüp renklendirir. */
 .hero-title::first-letter{font-size:1.28em;color:var(--cyan)}
 .konsept-aciklama::first-letter{font-size:2.5em;font-weight:800;color:var(--gold)}
 .bolum-basligi::after{
