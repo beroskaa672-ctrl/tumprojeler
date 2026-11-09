@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111c">
+  <title>Web Geliştirme Sınav Rehberi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <nav class="topbar" aria-label="Ana gezinme">
+    <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span>WEB<span class="brand-accent">LAB</span></span></a>
+    <a class="home-link" href="../index.html"><span aria-hidden="true">←</span> Projeler merkezi</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">11. SINIF · WEB TABANLI UYGULAMA GELİŞTİRME</p>
+      <h1>Yazılıya <span>hazır ol.</span></h1>
+      <p class="hero-description">Dokuz haftanın defter özetlerine göz at, notlarını kopyala ve 49 soruluk bankayla kendini hazırla.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#defterNotlari">Defter notlarını aç <span aria-hidden="true">↓</span></a>
+        <a class="hero-secondary" href="#calismaAlani">Soru bankasına geç</a>
+      </div>
+    </div>
+    <div class="hero-stats" aria-label="Çalışma özeti">
+      <div class="stat"><strong>49</strong><span>soru ve cevap</span></div>
+      <div class="stat"><strong>9</strong><span>haftalık konu</span></div>
+      <div class="stat"><strong id="bilinenSayi">0</strong><span>öğrendim</span></div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section id="defterNotlari" class="notes-section" aria-labelledby="notBasligi">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DİJİTAL DEFTER</p>
+          <h2 id="notBasligi">9 haftanın kısa notları</h2>
+          <p class="muted">Bir haftayı aç, ana kavramları gözden geçir veya notu tek tıkla kopyala.</p>
+        </div>
+        <span class="notes-count">01 — 09 <span aria-hidden="true">/</span> 9 hafta</span>
+      </div>
+      <div id="haftaNotlari" class="notes-grid"></div>
+
+      <details class="exam-brief">
+        <summary>
+          <span class="exam-icon" aria-hidden="true">✦</span>
+          <span><strong>Ek çalışma: uygulama sınavı</strong><small>Gönderilen okul sınavı belgesindeki 10 görevlik prova</small></span>
+          <span class="exam-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="exam-content">
+          <p>Bu ek belge haftalık notlardan ayrı bir uygulama provasıdır. Projede aşağıdaki becerileri tamamlaman bekleniyor:</p>
+          <ol>
+            <li>Anlamsal HTML, doğru başlık sırası ve kişisel sayfa bilgileri</li>
+            <li>Bootstrap grid ile responsive uzman kartları</li>
+            <li>CSS hover efektleri ve dairesel profil görselleri</li>
+            <li>API parametresini okul numarasına göre düzenleme</li>
+            <li>Uzman yaşına göre günlük ücret hesaplama</li>
+            <li>Yaşa göre kıdem rozeti için if/else koşulu</li>
+            <li>jQuery seçici hatasını bulup teşvik kutusunu açma</li>
+            <li>Modal içindeki üniversite ve e-posta bilgilerini tamamlama</li>
+            <li>Uzman tablosuna departman sütunu ekleme</li>
+            <li>3–6 haneli okul numarası doğrulaması ve soyadına özel kupon indirimi</li>
+          </ol>
+          <p class="exam-note">Puanlama: kurulum 30 · geliştirme görevleri 50 · canlı kontrol ve yayın 20 puan.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="calismaAlani" aria-labelledby="soruBasligi">
+    <section class="section-heading">
+      <div>
+        <p class="eyebrow">ÇALIŞMA ALANI</p>
+        <h2 id="soruBasligi">Soru bankası</h2>
+        <p class="muted">Cevapları aç, öğrendiklerini işaretle veya rastgele bir tur başlat.</p>
+      </div>
+      <div class="progress-summary"><span class="progress-dot"></span><span id="ilerlemeMetni">İlerlemen bu cihazda kaydedilir.</span></div>
+    </section>
+
+    <section class="toolbar" aria-label="Soru bankası araçları">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <span class="visually-hidden">Soru veya cevaplarda ara</span>
+        <input id="aramaKutusu" type="search" placeholder="Soru veya cevaplarda ara…" autocomplete="off">
+      </label>
+      <label class="filter-label">
+        <span class="visually-hidden">Konu filtresi</span>
+        <select id="konuFiltresi">
+          <option value="all">Tüm konular</option>
+        </select>
+      </label>
+      <button id="turBaslat" class="primary-button" type="button">⤨ Rastgele 10 soru</button>
+    </section>
+
+    <div class="list-meta">
+      <p id="sonucSayisi" aria-live="polite">49 soru gösteriliyor</p>
+      <button id="ilerlemeyiSifirla" class="text-button" type="button">İlerlemeyi sıfırla</button>
+    </div>
+
+    <section id="soruBankasi" aria-label="Soru listesi">
+      <div id="soruListesi" class="question-list"></div>
+      <p id="bosSonuc" class="empty-state" hidden>Bu filtreyle eşleşen soru bulunamadı.</p>
+    </section>
+
+    <section id="calismaTuru" class="study-panel" aria-label="Çalışma turu" hidden>
+      <div class="study-topline">
+        <button id="bankayaDon" class="text-button" type="button">← Soru bankasına dön</button>
+        <span id="turSayaci" class="round-counter"></span>
+      </div>
+      <div class="flashcard">
+        <div class="flashcard-meta"><span id="flashKonu" class="topic-pill"></span><span id="flashNumara" class="question-number"></span></div>
+        <h2 id="flashSoru"></h2>
+        <button id="cevabiGoster" class="reveal-button" type="button">Cevabı göster</button>
+        <div id="flashCevap" class="flash-answer" hidden></div>
+      </div>
+      <div id="degerlendirme" class="rating-actions" hidden>
+        <p>Bu soruyu nasıl değerlendiriyorsun?</p>
+        <button id="tekrarEt" class="review-button" type="button">↺ Tekrar edeceğim</button>
+        <button id="ogrendim" class="known-button" type="button">✓ Biliyorum</button>
+      </div>
+      <div class="study-navigation">
+        <button id="oncekiSoru" class="secondary-button" type="button">← Önceki</button>
+        <button id="sonrakiSoru" class="secondary-button" type="button">Sonraki →</button>
+      </div>
+      <div id="turSonucu" class="round-result" hidden></div>
+    </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>WEBLAB <span class="muted">· Kişisel tekrar alanı</span></span>
+    <a href="../index.html">Projeler merkezine dön</a>
+  </footer>
+</body>
+</html>
