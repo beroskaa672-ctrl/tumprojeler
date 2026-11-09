@@ -95,10 +95,27 @@ const haftaNotlari = [
     baslik: "Dijital kimlik ve web'in temelleri",
     proje: "Dijital Kimlik Kartı",
     notlar: [
-      "IP adresi cihazı tanımlar; DNS, alan adını ilgili IP adresine çevirir. Sunucu web dosyalarını barındırır; HTTP ve HTTPS tarayıcı ile sunucu arasındaki iletişim kurallarıdır.",
-      "Domain sitenin adresidir, hosting dosyaların sunucuda saklandığı hizmettir. URL belirli bir kaynağın tam adresini gösterir; FTP dosya aktarımında kullanılır.",
-      "HTML sayfanın yapısını, CSS görünümünü, JavaScript etkileşimini oluşturur. Front-end arayüzü, back-end sunucu ve veri tarafını geliştirir; full-stack ikisini de kapsar.",
-      "VS Code kod editörüdür. .gov, .edu, .k12, .com, .org, .mil, .net, .ac, .int, .info ve .biz yaygın alan adı uzantılarıdır."
+      "IP Adresi (Internet Protocol Address): İnternete bağlı her cihazı (bilgisayar, sunucu, telefon vb.) tanımlayan, noktalama işaretleriyle ayrılmış benzersiz sayısal etikettir.",
+      "DNS (Domain Name System): İnsanların okuyabildiği alan adlarını (google.com gibi), bilgisayarların anladığı IP adreslerine çeviren internetin telefon rehberidir.",
+      "Sunucu (Server): Web sitelerini, dosyaları veya uygulamaları barındıran ve internet üzerinden gelen isteklere yanıt veren, sürekli çalışan güçlü bilgisayardır.",
+      "HTTP (Hypertext Transfer Protocol): Web tarayıcısı ile sunucu arasında web sayfası verilerinin nasıl aktarılacağını belirleyen temel iletişim kuralıdır.",
+      "HTTPS (Hypertext Transfer Protocol Secure): Tarayıcı ile sunucu arasındaki veri iletişimini şifreleyerek güvenli hale getiren HTTP sürümüdür.",
+      "Domain (Alan Adı): Bir web sitesinin karmaşık IP adresi yerine kullanılan, akılda kalıcı ve kolay yazılabilen ismidir (örneğin google.com).",
+      "URL (Uniform Resource Locator): Belirli bir sayfa, resim veya dosya gibi web kaynağının internetteki tam adresini gösteren metin dizesidir.",
+      "WWW (World Wide Web): İnternet üzerinde barındırılan ve URL'lerle erişilebilen, birbirine bağlı web sayfaları ve içeriklerden oluşan küresel sistemdir.",
+      "Hosting (Barındırma): Web sitesinin tüm dosya ve verilerinin internet üzerinden 7/24 erişilebilmesi için bir sunucuda saklanması hizmetidir.",
+      "FTP (File Transfer Protocol): Bilgisayar ile sunucu arasında dosya yüklemek veya indirmek için kullanılan standart ağ protokolüdür.",
+      "HTML (Hypertext Markup Language): Başlık, paragraf ve resimler gibi bir web sayfasının temel içeriğini ve yapısını oluşturan işaretleme dilidir.",
+      "Etiket (Tag): HTML'de bir elementi tanımlamak için küçüktür ve büyüktür işaretleri (< >) arasına yazılan komuttur; örneğin paragraf için <p> kullanılır.",
+      "CSS (Cascading Style Sheets): HTML sayfasının renk, yazı tipi ve yerleşim gibi görsel stilini belirleyen dildir.",
+      "JavaScript (JS): Web sayfalarına buton, animasyon ve form kontrolü gibi etkileşimli özellikler ve dinamizm katan programlama dilidir.",
+      "Front-end (Ön Yüz): Kullanıcının tarayıcıda gördüğü ve etkileşimde bulunduğu arayüzü geliştiren alandır.",
+      "Back-end (Arka Yüz): Veritabanı, sunucu işlemleri ve iş mantığı gibi kullanıcı tarafından görülmeyen sistemleri geliştiren alandır.",
+      "Full-stack (Tam Yığın): Bir web projesinin hem front-end hem de back-end geliştirmesini yapabilen uzmanlık alanıdır.",
+      "Tarayıcı (Browser): Chrome ve Firefox gibi web sayfalarını görüntülememizi ve onlarla etkileşim kurmamızı sağlayan yazılımdır.",
+      "Kod editörü: Geliştiricilerin HTML ve CSS gibi kodları yazıp düzenlediği programdır; Visual Studio Code buna örnektir.",
+      "WYSIWYG editör: Kod yazmadan, çoğunlukla sürükle-bırak araçlarıyla sayfa oluşturur; adı Ne Görürsen Onu Alırsın anlamına gelir.",
+      "Yaygın alan adı uzantıları: .gov devlet kurumları, .edu eğitim kurumları, .k12 temel eğitim ve ortaöğretim, .org ticari olmayan kuruluşlar, .com ticari kuruluşlar, .mil askerî kurumlar, .net ağ servisleri, .ac akademik kurumlar, .int uluslararası kuruluşlar, .info bilgi siteleri ve .biz işletmeler için kullanılır."
     ]
   },
   {
@@ -106,10 +123,13 @@ const haftaNotlari = [
     baslik: "Web tasarımının 7 ilkesi",
     proje: "Benim Şehrim tanıtım sayfası",
     notlar: [
-      "İçerik doğru, özgün ve hedef kitleye uygun olmalı; tasarım (layout) logo, menü ve içeriğin yerleşimini planlamalıdır.",
-      "Biçimsellik renk uyumu, kontrast ve okunaklı tipografiyi kapsar. İşlevsellik ve kullanılabilirlik; hızlı yüklenen, çalışan ve kolay gezilen bir site gerektirir.",
-      "Güncellik içerik ve teknolojilerin yeniliğini; uygunluk ve güvenilirlik doğru iletişim bilgilerini, çalışan bağlantıları ve düzgün dili gözetir.",
-      "Uyumluluk farklı tarayıcı ve cihazlarda doğru görünmektir. Responsive düzen için viewport meta etiketi ve farklı ekranlara uyumlu tasarım kullanılır."
+      "İçerik: Sitenin kalbidir. Yazı, resim ve videolar özgün, doğru ve hedef kitleye uygun olmalıdır.",
+      "Tasarım (Layout): Logo, menü ve içeriklerin ekranda nereye ve hangi düzende yerleşeceğinin planlanmasıdır.",
+      "Biçimsellik: Renk uyumu, kontrast (zıtlık) ve okunabilir yazı tiplerinin (tipografi) kullanılmasıdır.",
+      "İşlevsellik ve Kullanılabilirlik: Site hızlı yüklenmeli, menüler ve butonlar çalışmalı, gezinmek kolay olmalıdır.",
+      "Güncellik: Haber, duyuru ve tarihler eski olmamalı; site HTML5 ve CSS3 gibi güncel teknolojilerle hazırlanmalıdır.",
+      "Uygunluk ve Güvenilirlik: İletişim bilgileri bulunmalı, bağlantılar çalışmalı ve dil bilgisi hataları olmamalıdır.",
+      "Uyumluluk: Site farklı tarayıcılarda ve mobil, tablet, bilgisayar gibi cihazlarda bozulmadan çalışmalıdır. Bu, responsive tasarımı ve viewport meta etiketini kapsar."
     ]
   },
   {
@@ -117,10 +137,22 @@ const haftaNotlari = [
     baslik: "HTML5 ve anlamsal web",
     proje: "Geleceğin Teknolojileri blogu",
     notlar: [
-      "<!DOCTYPE html> HTML5 belgesini bildirir; charset UTF-8 Türkçe karakterleri, viewport meta etiketi mobil ekran uyumunu destekler.",
-      "Anlamsal etiketler içeriğin görevini anlatır: header başlık, nav menü, main ana içerik, article bağımsız içerik, section bölüm, aside yan bilgi, footer alt bilgidir.",
-      "Başlıklar anlam sırasını izler; h1'den sonra h2 gibi ilerlenir. strong önem, em vurgu belirtir; yorumlar <!-- ... --> biçimindedir.",
-      "display: flex öğeleri yan yana hizalayabilir. SFTP remotePath, dosyaların sunucuda hangi proje klasörüne yükleneceğini belirler."
+      "<!DOCTYPE html>: Tarayıcıya belgenin HTML5 standartlarını kullandığını bildirir.",
+      "<meta name=viewport>: Sitenin telefon ve tablette ekrana uyumlu (responsive) çalışmasını sağlar.",
+      "Başlık hiyerarşisi: Sayfada tek bir ana h1 kullanılır; başlık sıraları atlanmaz (h2'den sonra h3 gelir). Başlıklar içeriğin yapısını belirtir; yazı boyutu CSS ile ayarlanır.",
+      "<header>: Sayfanın veya bölümün başlık ve logo alanıdır.",
+      "<nav>: Menü ve gezinme bağlantılarının bulunduğu alandır.",
+      "<main>: Sayfanın ana içeriğini belirtir.",
+      "<article>: Kendi başına anlamlı ve bağımsız makale veya haber içeriğidir.",
+      "<section>: Sayfa içeriğindeki konuya ait alt bölümdür.",
+      "<aside>: Ana içeriğin yanında yer alan ek bilgi veya kenar çubuğudur.",
+      "<footer>: Sayfanın veya bölümün altındaki iletişim ve telif alanıdır.",
+      "<strong>: Metni kalın gösterir ve içeriğin önemli olduğunu anlamsal olarak belirtir.",
+      "<em>: Metni eğik gösterir ve vurgulanması gerektiğini anlamsal olarak belirtir.",
+      "<!-- Yorum -->: Tarayıcıda görünmeyen, kodu yazan kişiye yönelik nottur.",
+      "Semantic (Anlamsal) Web: Etiketlerin yalnızca görünümü değil, içeriğin anlamını (başlık, menü, makale gibi) tarayıcıya ve arama motoruna bildirmesidir.",
+      "main { display: flex; }: İçindeki section ve aside gibi kutuları alt alta değil yan yana hizalayabilir.",
+      "SFTP remotePath: Dosyaların sunucudaki proje klasörüne yükleneceği yolu belirtir; örneğin /htdocs/hafta3 ayrı bir klasördür ve diğer projelerin üzerine yazmayı önler."
     ]
   },
   {
@@ -128,10 +160,12 @@ const haftaNotlari = [
     baslik: "CSS seçicileri ve görsel düzen",
     proje: "CosmicTours",
     notlar: [
-      "CSS satır içi, sayfa içi veya harici dosyadan eklenebilir. Çok sayfalı projelerde ortak style.css kullanmak düzenlemeyi kolaylaştırır.",
-      "Etiket seçici h1 gibi yazılır; kimlik #logo, sınıf .kart biçimindedir. ID sayfada tekil, sınıf birden çok öğede kullanılabilir.",
-      ".kart img torun seçicisidir ve kart içindeki görselleri seçer. .kart > img yalnızca doğrudan çocuk görseli seçer.",
-      ":hover fareyle üzerine gelme durumunu; ::first-letter ve ::selection metnin belirli parçalarını hedefler."
+      "Etiket seçici (body, h1): HTML etiketinin adıyla yazılır ve sayfadaki o etiketlerin tümünü seçer.",
+      "Kimlik (ID) seçici (#logo): id=logo olan elemanı seçer. Bir ID sayfada yalnızca bir kez kullanılır ve CSS'te başına # konur.",
+      "Sınıf (Class) seçici (.gezegen-karti): Bu sınıfa sahip elemanları seçer. Bir sınıf birden fazla elemanda kullanılabilir ve CSS'te başına nokta konur.",
+      "Torun seçici (.gezegen-karti img): Arada boşluk kullanır ve sınıfın içindeki img gibi eşleşen elemanları, iç içe kaç seviye olursa olsun seçer.",
+      "Sözde sınıf (:hover): Kullanıcı fareyle elemanın üzerine geldiğinde uygulanacak stili belirler.",
+      "Sözde eleman (::first-letter, ::selection): İlk harf veya fareyle seçilen metin gibi bir elemanın belirli parçasını hedefler; çift iki nokta ile yazılır."
     ]
   },
   {
@@ -139,10 +173,21 @@ const haftaNotlari = [
     baslik: "JavaScript, DOM ve API",
     proje: "Uzay Gemisi kontrol paneli · Sine-Evren",
     notlar: [
-      "JavaScript harici dosyadan eklenebilir; değişkenler, veri tipleri, fonksiyonlar, parametreler ve return değeri programın temel parçalarıdır.",
-      "DOM, JavaScript'in HTML öğelerini bulup değiştirmesini sağlar. Olaylar kullanıcı etkileşimini yakalar; if-else ve switch-case koşula göre farklı kod çalıştırır.",
-      "API uygulamalar arasında veri alışverişi sağlar. JSON yaygın veri biçimidir; fetch veri ister, async/await yanıt beklemeyi kolaylaştırır.",
-      "Template literal (backtick) metne ${deger} eklemeyi sağlar. URLSearchParams, detay.html?id=... gibi bağlantılardaki parametreleri okur."
+      "JavaScript: Web sayfalarına mantık, karar verme yeteneği ve kullanıcıyla etkileşim katan programlama dilidir.",
+      "DOM (Document Object Model): JavaScript'in HTML etiketlerine müdahale etmesini sağlayan ağaç yapısıdır. document.getElementById('Kutu') gibi bir komut, ID'si Kutu olan öğeyi bulur.",
+      "var / let (Değişkenler): Bilgisayarın geçici hafızasında sayı veya metin gibi verileri saklayan adlandırılmış alanlardır.",
+      "if / else: Koşula göre karar verir; şart doğruysa if, yanlışsa else içindeki kod çalışır.",
+      "switch - case: Bir değişkenin çok sayıda olası durumunu düzenli biçimde ele alır. Bir durumdan çıkmak için break kullanılır.",
+      "return: Fonksiyonun işini bitirirken çağrıldığı yere bir değer geri döndürmesini sağlar.",
+      "API (Uygulama Geliştirme Arayüzü): İki yazılımın birbiriyle konuşmasını ve veri alışverişi yapmasını sağlayan köprüdür.",
+      "JSON (JavaScript Object Notation): API'lerden gelen verilerin yazıldığı, anlaşılması kolay ve hafif metin biçimidir.",
+      "fetch(): JavaScript'te bir URL'den internet verisi istemek ve çekmek için kullanılan metottur.",
+      "async / await: Zaman alan asenkron işlemlerin tamamlanmasını bekleyip kodu daha sıralı biçimde yazmayı sağlar.",
+      "Template Literals (backtick): Ters tırnakla (``) yazılır; metne ${degisken} biçiminde JavaScript değeri eklemeyi sağlar.",
+      "URL Parameters (Query Strings): Sayfalar arasında adres çubuğuyla veri taşır, soru işaretiyle başlar; örnek: detay.html?id=50.",
+      "URLSearchParams: JavaScript'in adres çubuğundaki parametreleri okumasını sağlar.",
+      "Dinamik sayfa: İçeriği URL'den gelen ID'ye göre API'den alır ve sayfayı bu verilerle oluşturur.",
+      "<iframe>: YouTube veya Google Maps gibi başka bir sayfayı mevcut web sayfasının içine gömmeye yarayan HTML etiketidir."
     ]
   },
   {
@@ -150,10 +195,11 @@ const haftaNotlari = [
     baslik: "Medya, formlar, tablolar ve localStorage",
     proje: "CyberArena · TechStore",
     notlar: [
-      "video ve audio HTML5 medya etiketleridir. Formlar input alanlarıyla veri alır; required ve pattern gibi nitelikler girdiyi doğrular.",
-      "Tabloda table genel alanı, thead başlığı, tbody verileri, tr satırı, th başlık hücresi ve td veri hücresini belirtir.",
-      "event.preventDefault() varsayılan form gönderimini durdurup veriyi JavaScript ile işlemeye yarar.",
-      "localStorage veriyi tarayıcıda saklar. JSON.stringify nesneyi metne, JSON.parse metni tekrar JavaScript verisine dönüştürür."
+      "<video> ve <audio>: Web sayfasında video ve ses dosyalarını oynatmak için kullanılan HTML5 medya etiketleridir.",
+      "Form ve doğrulama: <form> ve <input> kullanıcıdan veri alır. required alanı zorunlu kılar; pattern girilen metnin belirli biçime uymasını ister.",
+      "Tablo: <table> tabloyu, <thead> başlık bölümünü, <tbody> veri bölümünü, <tr> satırı, <th> başlık hücresini, <td> veri hücresini belirtir.",
+      "event.preventDefault(): Tarayıcının varsayılan form gönderimini durdurur; JavaScript'in girilen veriyi işlemesine imkân verir.",
+      "localStorage: Verileri tarayıcıda saklar ve sayfa yenilense de tutar. JSON.stringify nesneyi metne, JSON.parse metni tekrar JavaScript verisine çevirir."
     ]
   },
   {
@@ -161,10 +207,11 @@ const haftaNotlari = [
     baslik: "Bootstrap ve jQuery",
     proje: "SiberGaraj araç kiralama otomasyonu",
     notlar: [
-      "Bootstrap 12 sütunlu grid, navbar, carousel, card, modal, collapse, table, alert ve badge gibi hazır bileşenler sunar.",
-      "col-12, col-md-6 ve col-lg-3 sınıfları farklı ekran genişliklerinde sırasıyla bir, iki ve dört sütunlu kart düzeni kurabilir.",
-      "Font Awesome sınıfları ikon ekler. jQuery ready DOM hazır olduğunda çalışır; slideToggle açıp kapatır, fadeOut soldurarak gizler.",
-      "API ve localStorage birlikte kullanılarak veriler çekilebilir, işlenebilir ve tarayıcıda saklanabilir."
+      "Bootstrap Grid: 12 sütunlu satır yapısıdır. col-12 küçük ekranda bir, col-md-6 orta ekranda iki, col-lg-3 geniş ekranda dört kartı yan yana yerleştirebilir.",
+      "Bootstrap bileşenleri: Navbar gezinme menüsü; carousel kayan görsel; card içerik kartı; modal açılır pencere; collapse açılıp kapanan alan; table tablo; alert bildirim; badge kısa etikettir.",
+      "Font Awesome: Hazır sınıflarıyla arayüze vektörel ikon ekleyen kütüphanedir.",
+      "jQuery ready: HTML belgesi hazır olduğunda kodu çalıştırır.",
+      "slideToggle: Bir alanı kayarak açar veya kapatır. fadeOut: Bir alanı soldurarak gizler."
     ]
   },
   {
@@ -172,10 +219,10 @@ const haftaNotlari = [
     baslik: "Bağlantılar ve gelişmiş HTML5 formları",
     proje: "SiberFest teknoloji yarışması",
     notlar: [
-      "target='_blank' yeni sekme, target='_self' aynı sekme açar. href='#id' sayfa içi çıpa; mailto: e-posta bağlantısı kurar.",
-      "fieldset form alanlarını gruplar, legend gruba başlık verir. optgroup select seçeneklerini; datalist input önerilerini düzenler.",
-      "range, color ve date farklı veri türlerini seçtirir; pattern ve required form girdilerini doğrulamaya yardım eder.",
-      "meter bilinen bir aralıktaki ölçümü, progress ise bir işin tamamlanma oranını gösterir."
+      "<a> ve target: target=_blank bağlantıyı yeni sekmede, target=_self aynı sekmede açar. href=#id sayfa içi çıpa kurar; mailto: e-posta bağlantısı açar.",
+      "<fieldset> ve <legend>: Form elemanlarını mantıksal bir grupta çerçeveler; legend bu çerçevenin başlığını oluşturur.",
+      "<optgroup> ve <datalist>: optgroup select seçeneklerini kategorilere ayırır. datalist bir input alanına otomatik tamamlama önerileri bağlar.",
+      "<meter> ve <progress>: meter bilinen aralıktaki skaler ölçümü (ör. bütçe riski) gösterir; progress bir işlemin tamamlanma oranını (ör. yüzde 50 yüklendi) gösterir."
     ]
   },
   {
@@ -183,10 +230,13 @@ const haftaNotlari = [
     baslik: "CSS seçicileri, kutu modeli ve konumlandırma",
     proje: "AeroSiber uçuş rezervasyon portalı",
     notlar: [
-      ":hover fareyle üzerine gelmeyi, :focus odaklanmayı, :active basılı tutmayı biçimlendirir. ::before, ::after, ::first-letter ve ::selection parçaları hedefler.",
-      "Çocuk seçicisi (>) yalnızca doğrudan çocuğu; boşlukla yazılan torun seçicisi iç içe tüm eşleşmeleri seçer.",
-      "Kutu modeli içten dışa content, padding, border ve margin katmanlarından oluşur. px, em ve vh farklı boyut ölçüleridir.",
-      "relative normal konuma göre yerleşir; absolute konumlandırılmış atasını, fixed ekranı referans alır. z-index üst üste gelen öğelerin sırasını belirler."
+      "Sözde sınıflar (:hover, :focus, :active): hover fareyle üzerine gelindiğinde, active fareyle basılı tutulduğunda, focus ise bir input odaklanıp veri girildiğinde uygulanacak stili belirler.",
+      "Sözde elemanlar (::first-letter, ::before, ::after, ::selection): Elemanın ilk harfini, öncesini, sonrasını veya fareyle seçilen metni biçimlendirir.",
+      "Çocuk seçicisi (>): Yalnızca seçilen öğenin doğrudan çocuklarını hedefler. Torun seçicisi (boşluk): İç içe kaç seviye olursa olsun eşleşen öğeleri hedefler.",
+      "Kutu modeli: Her HTML elemanı bir kutudur. İçten dışa content (içerik), padding (iç boşluk), border (kenarlık) ve margin (dış boşluk) katmanlarından oluşur.",
+      "position: relative öğeyi normal konumuna göre kaydırır ve içindeki absolute öğelere referans olur. absolute en yakın konumlandırılmış atasına göre yerleşir.",
+      "position: fixed öğeyi ekrana sabitler; sayfa kaysa da hareket etmez. z-index üst üste gelen öğelerden hangisinin önde duracağını belirler.",
+      "display: inline-block öğeyi satır içinde tutarken kutu gibi genişlik, yükseklik ve boşluk değerleri almasına izin verir."
     ]
   }
 ];
@@ -340,7 +390,7 @@ function haftaNotuKartiOlustur(not) {
   baslik.textContent = not.baslik;
   const proje = document.createElement("span");
   proje.className = "note-project";
-  proje.textContent = not.proje;
+  proje.textContent = `${not.notlar.length} madde · ${not.proje}`;
   baslikAlani.append(baslik, proje);
   const isaret = document.createElement("span");
   isaret.className = "note-chevron";
@@ -359,8 +409,8 @@ function haftaNotuKartiOlustur(not) {
   const kopyala = document.createElement("button");
   kopyala.className = "note-copy";
   kopyala.type = "button";
-  kopyala.textContent = "Notu kopyala";
-  kopyala.setAttribute("aria-label", `${not.hafta}. hafta notlarını kopyala`);
+  kopyala.textContent = "Tüm notları kopyala";
+  kopyala.setAttribute("aria-label", `${not.hafta}. haftanın tüm yazma notlarını kopyala`);
   kopyala.addEventListener("click", () => notuKopyala(notMetniniOlustur(not), kopyala));
   govde.append(maddeler, kopyala);
   kart.append(ozet, govde);
