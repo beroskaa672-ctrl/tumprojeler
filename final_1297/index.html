@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="student-number" content="1297">
+  <meta name="theme-color" content="#08121c">
+  <title>Siber Kalkan · Final 1297</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="enUst" data-page="vitrin">
+  <div class="topline"><span class="status-dot"></span> SİBER KALKAN GÜVENLİK MERKEZİ <span class="topline-detail">Zonguldak · Öğrenci Final Projesi</span></div>
+
+  <!-- FINAL GÖREV 1 /görev1: mailto adresini kendi okul e-posta adresinle değiştir; target blank dış bağlantıyı yeni sekmede açar; çıpa bağlantısı #kadroBolumu ile aynı sayfada aşağı iner. -->
+  <div class="sabit-yan-bar" role="group" aria-label="Hızlı erişim bağlantıları">
+    <a href="mailto:?subject=Siber%20Kalkan%20Projesi" class="yan-kutu kirmizi" title="E-posta gönder" aria-label="E-posta gönder"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+    <a href="https://www.meb.gov.tr/" target="_blank" rel="noopener noreferrer" class="yan-kutu mavi" title="GitHub profilini yeni sekmede aç" aria-label="GitHub yeni sekmede"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+    <a href="#kadroBolumu" class="yan-kutu sari" title="Uzman kadrosuna git" aria-label="Uzman kadrosuna kaydır"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></a>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark cyber-nav sticky-top" aria-label="Ana gezinme">
+    <div class="container">
+      <!-- FINAL GÖREV 2.A /görev2: Bu ajans adındaki 1297, okul numarası örneğidir; kendi numaran farklıysa markayı da güncelle. -->
+      <a class="navbar-brand cyber-brand" href="index.html"><span class="brand-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>SİBER KALKAN <small>· 1297</small></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="anaMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Vitrin</a></li>
+          <li class="nav-item"><a class="nav-link" href="gorev-formu.html">Kayıt ve konfigüratör</a></li>
+          <li class="nav-item"><a class="btn btn-warning btn-sm fw-bold text-dark" href="kanit-paneli.html"><i class="fa-solid fa-shield-halved me-1" aria-hidden="true"></i>Kanıt paneli <span class="nav-counter" id="kayitSayaci">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-cyber">
+    <div class="hero-scan" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="eyebrow"><span class="eyebrow-line"></span> GÜVENLİK · DAYANIKLILIK · GÜVEN <span class="eyebrow-line"></span></p>
+      <!-- FINAL GÖREV 2.B /görev2: Kendi ajans sloganını buraya yaz; ilk harf .konsept-aciklama değil, başlıkta .bolum-basligi imzası ::after ile görünür. -->
+      <h1 class="hero-title">Ağını koru.<br><span>Geleceğini güvene al.</span></h1>
+      <p class="konsept-aciklama">Siber Kalkan, okul toplulukları ve küçük ekipler için dijital güvenlik farkındalığını anlaşılır hale getirir. <b>Güvenli oturum</b> alışkanlıkları ve <b>ağ savunma</b> çalışmalarıyla teknolojiyi daha bilinçli kullanmaya yardımcı olur.</p>
+      <div class="hero-actions"><a href="gorev-formu.html" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-sliders me-2" aria-hidden="true"></i>Konfigüratörü aç</a><a href="#kadroBolumu" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-arrow-down me-2" aria-hidden="true"></i>Uzmanları tanı</a></div>
+      <div class="hero-stats"><span><strong>01</strong> Güvenli kimlik</span><span><strong>02</strong> Akıllı yapılandırma</span><span><strong>03</strong> Kanıtlanabilir sonuç</span></div>
+    </div>
+    <div class="hero-seal" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i><span>SECURE BY DESIGN</span></div>
+  </header>
+
+  <main>
+    <section class="container section-space" aria-labelledby="hizmetBaslik">
+      <div class="section-heading"><p class="eyebrow">SİBER SAVUNMA HİZMETLERİ</p><h2 id="hizmetBaslik" class="bolum-basligi">Dijital dünyada güçlü kal</h2><p>Günlük güvenlik alışkanlıklarını ölçülebilir ve uygulanabilir adımlara dönüştür.</p></div>
+      <!-- FINAL GÖREV 2.C /görev2: Üç kartın başlık/açıklamalarını seçtiğin konsepte göre kişiselleştirebilirsin. .hizmet-kutusu > h3 çocuk, .hizmet-kutusu b torun seçicidir. -->
+      <div class="row g-4">
+        <div class="col-md-4"><article class="hizmet-kutusu"><span class="service-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></span><h3>Kimlik ve parola güvenliği</h3><p>Güçlü parola ve çok faktörlü doğrulamayla hesaplarını <b>koruma altına al</b>.</p></article></div>
+        <div class="col-md-4"><article class="hizmet-kutusu"><span class="service-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span><h3>Ağ güvenliği farkındalığı</h3><p>Şüpheli bağlantıları tanı, cihazlarını güncel tut ve <b>ağını güvenle yönet</b>.</p></article></div>
+        <div class="col-md-4"><article class="hizmet-kutusu"><span class="service-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></span><h3>Olaylara hazırlık</h3><p>Olası tehditlere karşı temel adımları önceden planla ve <b>hızlıca karşılık ver</b>.</p></article></div>
+      </div>
+    </section>
+
+    <section id="kadroBolumu" class="crew-section section-space" aria-labelledby="kadroBaslik">
+      <div class="container"><div class="section-heading"><p class="eyebrow">UZMAN KADROSU</p><h2 id="kadroBaslik" class="bolum-basligi">Güvenlik ekibiyle tanış</h2><p>Örnek uzman profilleri açık kullanıcı API'sinden gelir; bağlantı olmazsa yedek kartlar görünür.</p></div><p id="uzmanDurumu" class="api-status" role="status" aria-live="polite">Uzmanlar yükleniyor…</p><div id="uzman-vitrini" class="uzman-vitrini"></div></div>
+    </section>
+
+    <section class="container section-space"><div class="final-cta"><div><p class="eyebrow">KENDİ GÜVENLİK PROFİLİNİ OLUŞTUR</p><h2>Bir yapılandırma seç, kanıtını incele.</h2><p>Form girdileri bu tarayıcıdaki demoya kaydedilir; gerçek üyelik veya güvenlik servisi değildir.</p></div><a href="gorev-formu.html" class="btn btn-warning btn-lg fw-bold text-dark">Forma geç <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></a></div></section>
+  </main>
+
+  <a href="#enUst" id="yukariCikOk" aria-label="Sayfanın başına dön" title="Yukarı çık"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+  <footer class="site-footer"><div class="container"><a class="footer-brand" href="index.html">SİBER KALKAN <span>· 1297</span></a><p>Güvenlik, doğru alışkanlıklarla başlar.</p><small>© 2026 · Bertuğ Saka · Eğitim amaçlı öğrenci projesi</small></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="student-number" content="1297">
+  <meta name="theme-color" content="#08121c">
+  <title>Kayıt ve Konfigüratör · Siber Kalkan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="form">
+  <nav class="navbar navbar-expand-lg navbar-dark cyber-nav"><div class="container"><a class="navbar-brand cyber-brand" href="index.html"><span class="brand-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>SİBER KALKAN <small>· 1297</small></a><div class="navbar-nav ms-auto flex-row gap-3 align-items-center"><a class="nav-link" href="index.html">Vitrin</a><a class="btn btn-warning btn-sm fw-bold text-dark" href="kanit-paneli.html">Kanıt paneli <span class="nav-counter" id="kayitSayaci">0</span></a></div></div></nav>
+  <main class="container form-page">
+    <header class="form-heading"><p class="eyebrow">ÜYE KAYDI · KİŞİSEL KONFİGÜRATÖR</p><h1 class="section-title">Güvenlik profilini oluştur</h1><p>Formu tamamla; oluşturduğun profil kanıt panelindeki kartlarda görünsün.</p></header>
+    <div class="privacy-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Bu sadece okul demosudur. Kayıtlar bu tarayıcının <code>localStorage</code> alanında kalır. Gerçek parola veya hassas kişisel bilgi kullanma.</span></div>
+
+    <form id="finalFormu" class="final-form" autocomplete="on">
+      <fieldset class="form-cerceve">
+        <legend><span class="fieldset-number">01</span> Kimlik ve kişisel güvenlik kilidi</legend>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label" for="kisiAd">Adınız ve soyadınız <span class="required-mark">*</span></label>
+            <!-- FINAL GÖREV 5.A /görev5: autofocus sayfa açılınca imleci bu alana getirir; required boş gönderimi engeller. -->
+            <input type="text" id="kisiAd" name="ad" class="form-control ozel-input" placeholder="Ad Soyad" required autofocus minlength="3" maxlength="80" autocomplete="name">
+          </div>
+          <div class="col-md-6"><label class="form-label text-warning fw-bold" for="ozelKilitKodu">Kişisel öğrenci kilidi <span class="required-mark">*</span></label>
+            <!-- FINAL GÖREV 5.B /görev5: 1297 bölümünü kendi okul numaranla değiştir. [A-Z]{2} tam iki büyük harf ister; 1297TR geçer, 999AA (numaran 1297 ise) geçmez. -->
+            <input type="text" id="ozelKilitKodu" name="kilitKodu" class="form-control ozel-input" required pattern="1297[A-Z]{2}" maxlength="6" minlength="6" autocomplete="off" title="Kendi okul numaranızın ardından iki büyük harf yazın (örnek: 1297TR)" placeholder="Örn. 1297TR">
+            <small class="form-hint">Bu alana gerçek okul numaran ve ardından iki büyük harf gir. Parola değildir; final görevi doğrulamasıdır.</small>
+          </div>
+          <div class="col-md-6"><label class="form-label" for="sehirInput">Şehir / bölge <span class="required-mark">*</span></label><input list="benimSehirlerim" id="sehirInput" name="sehir" class="form-control ozel-input" required placeholder="Şehir seç veya yaz…">
+            <!-- FINAL GÖREV 5.C /görev5: Datalist HTML'deki seçenekleri listeler, yazılan başka şehirleri de engellemez. En az dört yeni option eklendi. -->
+            <datalist id="benimSehirlerim"><option value="Zonguldak"><option value="Ankara"><option value="İstanbul"><option value="Bartın"><option value="Karabük"><option value="Samsun"></datalist>
+          </div>
+          <div class="col-md-6"><label class="form-label" for="tarihInput">Tarih seçimi <span class="required-mark">*</span></label>
+            <!-- FINAL GÖREV 5.D /görev5: text yerine date kullan; tarayıcı tarih seçici açar ve tarihi doğrular. -->
+            <input type="date" id="tarihInput" name="tarih" class="form-control ozel-input" min="2026-01-01" max="2027-12-31" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-cerceve">
+        <legend><span class="fieldset-number">02</span> Konsept ve ölçüm seçenekleri</legend>
+        <div class="row g-3 align-items-end">
+          <div class="col-md-6"><label class="form-label" for="kategoriInput">Hizmet / paket kategorisi <span class="required-mark">*</span></label>
+            <!-- FINAL GÖREV 6.A /görev6: İkinci optgroup, bir grup başlığı altında en az üç seçenek daha sunar. -->
+            <select id="kategoriInput" name="kategori" class="form-select ozel-input" required><option value="">Bir paket seçin</option><optgroup label="Standart paketler"><option value="Güvenli Başlangıç">Güvenli Başlangıç</option><option value="Gelişmiş Koruma">Gelişmiş Koruma</option></optgroup><optgroup label="Siber Kalkan uzman hizmetleri"><option value="Ağ Güvenliği Taraması">Ağ Güvenliği Taraması</option><option value="Oltalama Farkındalığı">Oltalama Farkındalığı</option><option value="Olay Müdahale Planı">Olay Müdahale Planı</option></optgroup></select>
+          </div>
+          <div class="col-md-6"><label class="form-label" for="miktarInput">Seviye / miktar <span class="required-mark">*</span></label>
+            <!-- FINAL GÖREV 6.B /görev6: min en küçük, max en büyük değerdir; step sayılar arasındaki artış aralığıdır. -->
+            <input type="number" id="miktarInput" name="miktar" class="form-control ozel-input" min="10" max="100" step="10" value="10" required>
+          </div>
+          <div class="col-md-6"><label class="form-label d-flex justify-content-between" for="gucRange"><span>Güç / bütçe kaydırıcısı</span><strong id="rangeGosterge" class="text-warning">50</strong></label><input type="range" id="gucRange" name="guc" class="form-range" min="10" max="100" step="5" value="50"><small class="form-hint">Kaydırıcıyı oynat; yanındaki sayı anında güncellensin.</small></div>
+          <div class="col-md-6"><label class="form-label" for="renkInput">Kart tema rengi</label>
+            <!-- FINAL GÖREV 6.C /görev6: Renk seçici için input type=color olmalı; varsayılan değer hex biçimindedir. -->
+            <input type="color" id="renkInput" name="renk" class="form-control form-control-color w-100 ozel-input" value="#ffc107">
+          </div>
+          <div class="col-12 extra-options">
+            <!-- FINAL GÖREV 6.D /görev6: Bu konsept için üç checkbox seçeneği ekledim; seçilen seçenekler karta yazılır. -->
+            <p class="form-label text-info fw-bold">İncelenecek güvenlik alanları</p>
+            <label class="choice-chip"><input type="checkbox" name="secenek" value="Ağ güvenliği"> Ağ güvenliği</label>
+            <label class="choice-chip"><input type="checkbox" name="secenek" value="Hesap koruması"> Hesap koruması</label>
+            <label class="choice-chip"><input type="checkbox" name="secenek" value="Olay müdahalesi"> Olay müdahalesi</label>
+          </div>
+          <div class="col-12"><label class="form-label" for="ekstraNot">Konsepte özel kısa not <span class="required-mark">*</span></label><textarea id="ekstraNot" name="not" rows="3" class="form-control ozel-input" required minlength="10" maxlength="220" placeholder="Bu profil hangi güvenlik hedefini destekliyor?"></textarea></div>
+        </div>
+      </fieldset>
+      <div id="formDurumu" class="form-status" role="status" aria-live="polite"></div>
+      <div class="form-actions"><button type="submit" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-floppy-disk me-2" aria-hidden="true"></i>Kaydet ve kanıt paneline git</button><button type="reset" class="btn btn-outline-light btn-lg">Sıfırla</button></div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container"><a class="footer-brand" href="index.html">SİBER KALKAN <span>· 1297</span></a><p>Eğitim amaçlı konfigüratör demosu</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

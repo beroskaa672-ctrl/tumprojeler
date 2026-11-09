@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="student-number" content="1297"><meta name="theme-color" content="#07111c">
+<title>Kanıt ve Denetim | Siber Kalkan</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body data-page="panel">
+<nav class="navbar navbar-expand-lg navbar-dark cyber-nav"><div class="container"><a class="navbar-brand cyber-brand" href="index.html"><span class="brand-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>SİBER KALKAN <small>· 1297</small></a><div class="navbar-nav ms-auto flex-row gap-3 align-items-center"><a class="nav-link" href="index.html">Vitrin</a><a class="nav-link" href="gorev-formu.html">Form sayfası</a></div></div></nav>
+<main class="container panel-page">
+<header class="form-heading"><p class="eyebrow">KAYITLAR · TEKNİK DENETİM · KOD SAVUNMASI</p><h1 class="section-title">Kanıt ve denetim paneli</h1><p>Form kayıtlarını, ölçüm alanlarını ve görev açıklamalarını burada incele.</p></header>
+<section class="audit-box" aria-labelledby="auditTitle"><div class="audit-head"><div><p class="eyebrow">ÖĞRETMEN KONTROLÜ</p><h2 id="auditTitle"><i class="fa-solid fa-magnifying-glass-chart me-2" aria-hidden="true"></i>Otomatik kod denetimi</h2><p>Öğrenci numarası, kilit kodu, CSS kuralları ve kanıt tablosu kontrol edilir.</p></div><button id="denetimDugmesi" type="button" class="btn btn-info fw-bold text-dark btn-lg"><i class="fa-solid fa-shield-halved me-2" aria-hidden="true"></i>Kodu denetle</button></div><div id="denetimRaporuAlani" class="audit-report" aria-live="polite"></div></section>
+<section class="section-space-sm" aria-labelledby="kayitBaslik"><div class="section-heading"><p class="eyebrow">LOCALSTORAGE</p><h2 id="kayitBaslik" class="bolum-basligi">Oluşturulan profiller</h2><p>Kartları form sayfasındaki veriler doldurur.</p></div><div id="uretilen-kartlar" class="row g-4"></div></section>
+<!-- GÖREV 10 /görev10: Açıklamalar gerçek dosya ve özellik adlarını içerir. Öğretmene kendi cümlelerinle anlat. -->
+<section class="evidence-box section-space-sm" aria-labelledby="savunmaBaslik"><p class="eyebrow">GÖREVİ NASIL ÇÖZDÜM?</p><h2 id="savunmaBaslik" class="bolum-basligi">Öğrenci kod savunma ve kanıt tablosu</h2><p class="evidence-intro">Açıklamalar projedeki değişiklikleri özetler. Öğretmene gösterirken örneklerle kendi cümlelerinle anlat.</p>
+<div class="table-responsive"><table class="table table-dark table-bordered align-middle evidence-table"><thead><tr><th scope="col">Görev konusu</th><th scope="col">Dosyada yaptığım değişiklik ve açıklaması</th></tr></thead><tbody id="savunmaTablosu">
+<tr><th scope="row">Bağlantı parametreleri</th><td>index.html içindeki mailto: bağlantısı e-posta taslağı açar. MEB bağlantısında target="_blank" yeni sekme açar; #kadroBolumu ise sayfadaki uzman alanına gider.</td></tr>
+<tr><th scope="row">CSS imzası ve kutu modeli</th><td>style.css içinde .bolum-basligi::after imzayı başlıklara ekler. .hizmet-kutusu için padding: 25px iç boşluk verir; dashed kenarlık ve 8px sol çizgi kartları belirginleştirir.</td></tr>
+<tr><th scope="row">Yuvarlak uzman fotoğrafı</th><td>.uzman-ust-sablon kapsayıcısına position: relative verdim. İçindeki position: absolute fotoğraf böylece sayfa yerine o karta göre konumlanır.</td></tr>
+<tr><th scope="row">Kişisel numara kilidi</th><td>gorev-formu.html içindeki pattern="1297[A-Z]{2}" okul numaramdan sonra tam iki büyük harf kabul eder. 1297TR geçerli; 999AA benim numaramla eşleşmediği için reddedilir.</td></tr>
+<tr><th scope="row">Form ve ölçüm elemanları</th><td>Formda required, autofocus, datalist, date, ikinci optgroup, min/max/step, color ve checkbox alanları var. JavaScript girdileri localStorage içine kaydedip kanıt kartlarını üretir.</td></tr>
+<tr><th scope="row">Focus görünümü ve panel</th><td>.ozel-input:focus koyu arka plan ve camgöbeği kenarlık kullanır. Kanıt panelindeki meter ölçüm değerini, progress ise yüzde ilerlemeyi gösterir.</td></tr>
+</tbody></table></div></section></main>
+<footer class="site-footer"><div class="container"><a class="footer-brand" href="index.html">SİBER KALKAN <span>· Bertuğ Saka 1297</span></a><p>Kodun amacını anlat; sonucu panelde göster.</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script></body></html>
