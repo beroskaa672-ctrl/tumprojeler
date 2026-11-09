@@ -17,7 +17,8 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-body.bg-siyah { min-height: 100vh; margin: 0; color: var(--text); background: var(--ink); font-family: var(--body); }
+body.bg-siyah { position: relative; isolation: isolate; min-height: 100vh; margin: 0; color: var(--text); background: var(--ink); font-family: var(--body); }
+body.bg-siyah::before { position: fixed; z-index: -1; inset: 0; content: ""; pointer-events: none; background: url("gorseller/ataturk-portre-1927.png") right clamp(12px, 7vw, 110px) center / auto min(96vh, 900px) no-repeat; opacity: .13; filter: grayscale(1) sepia(.2); mask-image: radial-gradient(ellipse at 78% 48%, #000 4%, rgba(0,0,0,.78) 42%, transparent 78%); }
 body.modal-open { overflow: hidden; }
 button, input, textarea, select { font: inherit; }
 a { color: inherit; }
@@ -47,6 +48,8 @@ a { color: inherit; }
 .anma-hero::before, .anma-hero::after { position: absolute; z-index: -1; content: ""; pointer-events: none; }
 .anma-hero::before { inset: 0; opacity: .2; background-image: linear-gradient(rgba(212, 175, 55, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, .08) 1px, transparent 1px); background-size: 58px 58px; mask-image: linear-gradient(to bottom, transparent, black 40%, transparent); }
 .anma-hero::after { top: 14%; left: 50%; width: min(72vw, 650px); aspect-ratio: 1; border: 1px solid rgba(212, 175, 55, .11); border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 26px rgba(212, 175, 55, .025), 0 0 0 64px rgba(212, 175, 55, .02); }
+.hero-stars { position: absolute; z-index: 0; inset: 0; pointer-events: none; opacity: .16; }
+.hero-stars::before { position: absolute; inset: 0; content: ""; background: url("gorseller/ataturk-portre-1927.png") right 13% center / auto 94% no-repeat; mask-image: radial-gradient(ellipse at 76% 48%, #000 4%, rgba(0,0,0,.75) 45%, transparent 78%); }
 .hero-content { position: relative; z-index: 1; padding-block: 84px 100px; text-align: center; animation: hero-in .8s ease both; }
 .hero-kicker { display: inline-flex; align-items: center; gap: 13px; color: #c5b879; font-family: var(--display); font-size: .66rem; letter-spacing: .2em; }
 .kicker-line { width: 30px; height: 1px; background: var(--gold); opacity: .75; }
@@ -68,6 +71,10 @@ a { color: inherit; }
 .yan-anma-btn.altin { color: #161205; background: var(--gold); }
 .yan-anma-btn.kirmizi { background: #a90c16; }
 .yan-anma-btn.siyah { background: #1b1b20; border-color: rgba(212, 175, 55, .6); }
+.mars-kontrol { position: fixed; z-index: 1030; bottom: 22px; left: 22px; display: inline-flex; align-items: center; gap: 9px; min-height: 46px; padding: 0 16px; color: #f0d77b; background: rgba(17,17,21,.94); border: 1px solid rgba(212,175,55,.55); border-radius: 99px; box-shadow: 0 8px 26px rgba(0,0,0,.35); font-family: var(--body); font-size: .78rem; cursor: pointer; backdrop-filter: blur(12px); transition: background .2s ease, transform .2s ease; }
+.mars-kontrol:hover { color: #151205; background: var(--gold-light); transform: translateY(-2px); }
+.mars-kontrol:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+.mars-kontrol[aria-pressed="true"] { color: #171205; background: var(--gold-light); }
 
 .chronology-grid { align-items: stretch; }
 .kronoloji-karti { position: relative; min-height: 100%; padding: 46px 24px 25px; overflow: hidden; background: linear-gradient(145deg, #151519, #101014); border: 1px solid #2d2c31; border-top: 2px solid rgba(212, 175, 55, .72); border-radius: 12px; transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease; }
@@ -215,6 +222,8 @@ a { color: inherit; }
 }
 @media (max-width: 575.98px) {
   html { scroll-padding-top: 70px; }
+  body.bg-siyah::before { background-position: center 90px; background-size: auto 64vh; opacity: .08; mask-image: radial-gradient(ellipse at 50% 42%, #000 4%, rgba(0,0,0,.68) 45%, transparent 78%); }
+  .hero-stars::before { background-position: center 18%; background-size: auto 84%; }
   .museum-nav { min-height: 66px; }
   .anma-hero { min-height: 720px; min-height: min(760px, calc(100svh - 66px)); }
   .hero-content { padding: 74px 20px 105px; }
@@ -229,6 +238,7 @@ a { color: inherit; }
   .yan-anma-btn { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; }
   .yan-anma-btn:hover { width: 42px; }
   .yukari-ok { right: 12px; bottom: 66px; width: 39px; height: 39px; }
+  .mars-kontrol { bottom: 14px; left: 12px; min-height: 42px; padding-inline: 12px; font-size: .72rem; }
   .section-intro { margin-bottom: 38px; }
   .hitabe-cerceve { padding: 28px 20px; }
   .hitabe-metin { font-size: .92rem; line-height: 1.85; }

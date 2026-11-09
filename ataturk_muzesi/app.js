@@ -277,10 +277,47 @@ function formGostergecileriniHazirla() {
   form.addEventListener("submit", aniKaydet);
 }
 
+function marsKontrolunuHazirla() {
+  const button = document.createElement("button");
+  const audio = new Audio("gorseller/istiklal-marsi.mp3");
+  button.type = "button";
+  button.className = "mars-kontrol";
+  button.textContent = "▶ İstiklâl Marşı";
+  button.setAttribute("aria-label", "İstiklâl Marşı'nı çal");
+  button.setAttribute("aria-pressed", "false");
+  audio.preload = "none";
+  button.addEventListener("click", async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        button.textContent = "Ⅱ Durdur";
+        button.setAttribute("aria-label", "İstiklâl Marşı'nı durdur");
+        button.setAttribute("aria-pressed", "true");
+      } catch {
+        button.textContent = "Marş yüklenemedi";
+        button.setAttribute("aria-label", "İstiklâl Marşı yüklenemedi");
+      }
+      return;
+    }
+    audio.pause();
+    audio.currentTime = 0;
+    button.textContent = "▶ İstiklâl Marşı";
+    button.setAttribute("aria-label", "İstiklâl Marşı'nı çal");
+    button.setAttribute("aria-pressed", "false");
+  });
+  audio.addEventListener("ended", () => {
+    button.textContent = "▶ İstiklâl Marşı";
+    button.setAttribute("aria-label", "İstiklâl Marşı'nı çal");
+    button.setAttribute("aria-pressed", "false");
+  });
+  document.body.append(button);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   sayaciGuncelle();
   aniDuvariniCiz();
   formGostergecileriniHazirla();
+  marsKontrolunuHazirla();
   document.querySelectorAll("[data-open-respect]").forEach(button => button.addEventListener("click", saygiDurusuAc));
   const closeButton = id("saygiKapat");
   if (closeButton) closeButton.addEventListener("click", saygiDurusuKapat);
