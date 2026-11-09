@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111e">
+  <title>Uçuş rezervasyonu | AeroSiber</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark airport-nav">
+    <div class="container"><a class="navbar-brand aero-brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>AERO<span class="brand-light">SİBER</span></a>
+      <div class="navbar-nav ms-auto flex-row gap-2 align-items-center"><a class="nav-link" href="index.html"><i class="fa-solid fa-arrow-left me-1" aria-hidden="true"></i>Ana sayfa</a><a class="btn btn-info btn-sm fw-bold text-dark" href="biletlerim.html">Biletlerim <span class="nav-counter" id="biletSayaci">0</span></a></div>
+    </div>
+  </nav>
+  <main class="container form-page">
+    <header class="form-heading"><p class="eyebrow">UÇUŞUNU PLANLA</p><h1 class="section-title">Akıllı rezervasyon formu</h1><p>Bilgileri doldur; bu demo biniş kartını bu tarayıcıda oluşturur.</p></header>
+    <div class="privacy-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span><strong>Eğitim demosu:</strong> Bilet ve e-posta adresi yalnızca bu cihazdaki tarayıcıya kaydedilir. Gerçek kimlik bilgisi girme; T.C. numarası, parola, not ve seçtiğin dosyanın içeriği kaydedilmez veya sunucuya gönderilmez.</span></div>
+
+    <form id="ucusFormu" class="booking-form" autocomplete="on">
+      <!-- GÖREV 9 /görev9: Bu satırdaki type="hidden" değerini geçici olarak type="text" yapıp terminal kodunu görünür kıl. Deneyden sonra hidden değerine döndür. -->
+      <input type="hidden" id="terminalKodu" name="terminalKodu" value="TR-ZNG-TERMINAL-1">
+      <fieldset class="ozel-fieldset">
+        <legend><span class="fieldset-number">01</span> Yolcu ve iletişim</legend>
+        <div class="row g-3">
+          <div class="col-md-4"><label class="form-label" for="yolcuAd">Ad soyad <span class="required-mark">*</span></label><input type="text" id="yolcuAd" name="ad" class="form-control siber-input" required autofocus minlength="3" maxlength="70" autocomplete="name" placeholder="Örn. Deniz Yılmaz"></div>
+          <div class="col-md-4"><label class="form-label" for="tcNo">T.C. kimlik numarası (demo) <span class="required-mark">*</span></label>
+            <!-- GÖREV 4 /görev4: Deneme için pattern ve maxlength değerlerini 4 yap; 11 rakam girince doğrulamanın engellediğini gör. Sonra ikisini de 11'e geri al. -->
+            <input type="text" id="tcNo" name="tcNo" class="form-control siber-input" required pattern="[0-9]{11}" maxlength="11" inputmode="numeric" autocomplete="off" title="11 haneli rakam girin" placeholder="Gerçek numara yerine 00000000000 yazabilirsin">
+            <small class="form-hint">Bu alan sadece pattern alıştırması içindir; numara bilette saklanmaz.</small>
+          </div>
+          <div class="col-md-4"><label class="form-label" for="pnrSifre">Örnek PNR parolası <span class="required-mark">*</span></label><input type="password" id="pnrSifre" name="pnrSifre" class="form-control siber-input" required pattern="[A-Za-z0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" title="4–8 harf veya rakam girin" placeholder="Örn. A1B2"><small class="form-hint">Demo olduğu için parolan kayıt edilmez.</small></div>
+          <div class="col-md-6"><label class="form-label" for="yolcuMail">E-posta</label><input type="email" id="yolcuMail" name="mail" class="form-control siber-input" autocomplete="email" placeholder="ornek@posta.com"></div>
+          <div class="col-md-6"><label class="form-label" for="yolcuTel">Cep telefonu</label><input type="tel" id="yolcuTel" name="tel" class="form-control siber-input" pattern="5[0-9]{9}" inputmode="numeric" autocomplete="tel" title="5 ile başlayan 10 haneli numara" placeholder="5321234567"></div>
+          <div class="col-12"><label class="form-label" for="yolcuUrl">Web sitesi / profil bağlantısı</label><input type="url" id="yolcuUrl" name="url" class="form-control siber-input" placeholder="https://ornek.com"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ozel-fieldset">
+        <legend><span class="fieldset-number">02</span> Rota ve zaman</legend>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label" for="kalkisYeri">Kalkış havalimanı <span class="required-mark">*</span></label><input list="havalimanlari" id="kalkisYeri" name="kalkis" class="form-control siber-input" required placeholder="Şehir veya kod yazın…">
+            <!-- GÖREV 6 /görev6: Yeni havalimanlarını bu datalist içine option satırı ekleyerek koy. Örnek: <option value="Gaziantep Havalimanı (GZT)"> ve <option value="Kayseri Erkilet (ASR)">. -->
+            <datalist id="havalimanlari"><option value="Zonguldak Çaycuma (ONQ)"><option value="İstanbul Havalimanı (IST)"><option value="Ankara Esenboğa (ESB)"><option value="İzmir Adnan Menderes (ADB)"><option value="Antalya Havalimanı (AYT)"><option value="Trabzon Havalimanı (TZX)"></datalist>
+          </div>
+          <div class="col-md-6"><label class="form-label" for="varisYeri">Varış noktası <span class="required-mark">*</span></label><select id="varisYeri" name="varis" class="form-select siber-input" required><option value="">Varış şehri seçin</option><optgroup label="Yurt içi"><option>İstanbul (IST)</option><option>Ankara (ESB)</option><option>İzmir (ADB)</option><option>Antalya (AYT)</option></optgroup><optgroup label="Avrupa"><option>Londra (LHR)</option><option>Berlin (BER)</option><option>Roma (FCO)</option></optgroup><optgroup label="Asya ve Amerika"><option>Tokyo (HND)</option><option>New York (JFK)</option></optgroup>
+            <!-- GÖREV 7 /görev7: Bu select içine <optgroup label="Orta Doğu & Körfez"><option>Dubai (DXB)</option><option>Doha (DOH)</option></optgroup> ekleyip yeni grubu dene. -->
+          </select></div>
+          <div class="col-md-4"><label class="form-label" for="ucusTarihi">Uçuş tarihi <span class="required-mark">*</span></label><input type="date" id="ucusTarihi" name="tarih" class="form-control siber-input" min="2026-01-01" max="2027-12-31" required></div>
+          <div class="col-md-4"><label class="form-label" for="ucusSaati">Tercih edilen saat <span class="required-mark">*</span></label><input type="time" id="ucusSaati" name="saat" class="form-control siber-input" value="14:30" required></div>
+          <div class="col-md-4"><label class="form-label" for="kartAy">Mil kartı ayı</label><input type="month" id="kartAy" name="kartAy" class="form-control siber-input" value="2027-08"></div>
+          <div class="col-md-6"><label class="form-label" for="ucusHaftasi">Alternatif hafta seçimi</label><input type="week" id="ucusHaftasi" name="hafta" class="form-control siber-input"></div>
+          <div class="col-md-6"><label class="form-label" for="ucusArama">Rota ara</label><input type="search" id="ucusArama" class="form-control siber-input" placeholder="Şehir veya havalimanı"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ozel-fieldset">
+        <legend><span class="fieldset-number">03</span> Bagaj ve uçuş tercihleri</legend>
+        <div class="row g-3 align-items-end">
+          <div class="col-md-4"><label class="form-label" for="bagajKg">Bagaj ağırlığı (kg) <span class="required-mark">*</span></label>
+            <!-- GÖREV 5 /görev5: Basamak miktarını step, üst limiti max belirler. 10'ar kg ve 80 kg sınırını denemek için step="10" max="80" yap. -->
+            <input type="number" id="bagajKg" name="bagaj" class="form-control siber-input" min="15" max="50" step="5" value="20" required>
+          </div>
+          <div class="col-md-4"><label class="form-label d-flex justify-content-between" for="koltukRange"><span>Koltuk sırası</span><strong id="koltukGosterge" class="text-info">12A</strong></label><input type="range" id="koltukRange" name="koltuk" class="form-range" min="1" max="30" step="1" value="12"><small class="form-hint">Aralık seçicisi: 1–30</small></div>
+          <div class="col-md-4"><label class="form-label" for="kartRengi">Biniş kartı rengi</label><input type="color" id="kartRengi" name="renk" class="form-control form-control-color siber-input w-100" value="#0dcaf0"></div>
+          <div class="col-md-6"><label class="form-label" for="belgeDosya">Öğrenci / indirim belgesi</label><input type="file" id="belgeDosya" class="form-control siber-input" accept=".pdf,.jpg,.jpeg,.png"><small class="form-hint">Dosya seçimi HTML türünü gösterir; dosya bu demoda yüklenmez.</small></div>
+          <div class="col-md-6"><label class="form-label" for="ozelNot">Kabin ekibine not</label><textarea id="ozelNot" name="not" rows="2" maxlength="180" class="form-control siber-input" placeholder="Bu örnek not bilette saklanmaz."></textarea></div>
+          <div class="col-md-6"><span class="form-label d-block">Uçuş sınıfı</span>
+            <!-- GÖREV 8 /görev8: Varsayılan sınıfı değiştirmek için checked kelimesini ekonomi satırından business satırına taşı. -->
+            <label class="choice-chip"><input type="radio" name="sinif" id="ekonomi" value="Ekonomi" checked> Ekonomi · 2.500 TL</label>
+            <label class="choice-chip"><input type="radio" name="sinif" id="business" value="Business VIP"> Business VIP · 6.000 TL</label>
+          </div>
+          <div class="col-md-6"><span class="form-label d-block">Ek hizmetler</span><label class="choice-chip"><input type="checkbox" name="hizmet" value="Fast-Track" checked> Fast-Track</label><label class="choice-chip"><input type="checkbox" name="hizmet" value="Uçak içi Wi-Fi"> Uçak içi Wi-Fi</label></div>
+        </div>
+      </fieldset>
+
+      <div class="form-status" id="formDurumu" role="status" aria-live="polite"></div>
+      <div class="form-actions"><button type="submit" class="btn btn-info btn-lg fw-bold text-dark"><i class="fa-solid fa-ticket me-2" aria-hidden="true"></i>Biniş kartımı oluştur</button><button type="reset" class="btn btn-outline-light btn-lg">Formu temizle</button></div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container"><a class="footer-brand" href="index.html">AERO<span>SİBER</span></a><p>Eğitim amaçlı uçuş rezervasyon demosu</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

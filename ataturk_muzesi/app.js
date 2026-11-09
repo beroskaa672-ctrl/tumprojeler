@@ -190,6 +190,7 @@ function anilariKaydet() {
   }
 }
 
+// ATATÜRK GÖREV 3 /görev3: Form submit olayı buraya gelir; anilariKaydet() veriyi bu tarayıcının localStorage alanına yazar.
 function aniKaydet(event) {
   event.preventDefault();
   const form = event.currentTarget;

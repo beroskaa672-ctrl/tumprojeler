@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --ink: #07111e;
+  --panel: #0c1a2b;
+  --panel-light: #10243a;
+  --line: rgba(157, 187, 216, .16);
+  --cyan: #4fe2f1;
+  --cyan-dark: #0dcaf0;
+  --gold: #ffc857;
+  --text: #f2f7fb;
+  --muted: #9cacc0;
+  --body-font: "DM Sans", Arial, sans-serif;
+  --display-font: "Space Grotesk", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { min-height: 100vh; margin: 0; color: var(--text); background: var(--ink); font-family: var(--body-font); }
+a { color: inherit; }
+::selection { color: #03121c; background: var(--cyan); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+.anma-bari { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 8px 18px; color: #d8e5ed; background: linear-gradient(90deg, #05090f, #13243a, #05090f); border-bottom: 1px solid rgba(255,200,87,.42); font-size: .78rem; }
+.anma-bari i { color: var(--gold); }
+.anma-bari span { color: var(--gold); font-weight: 700; }
+.anma-bari small { color: #aab9c7; }
+.airport-nav { min-height: 75px; background: rgba(5,12,21,.9); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+.aero-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--cyan) !important; font-family: var(--display-font); font-weight: 700; letter-spacing: .12em; }
+.brand-mark { display: grid; width: 35px; height: 35px; place-items: center; background: rgba(79,226,241,.1); border: 1px solid rgba(79,226,241,.45); border-radius: 11px; transform: rotate(-8deg); }
+.brand-mark i { transform: rotate(8deg); }
+.brand-light { color: #f3f7fb; }
+.airport-nav .nav-link { color: #c0cddd; font-size: .87rem; }
+.airport-nav .nav-link:hover { color: var(--cyan); }
+.nav-counter { display: inline-grid; min-width: 20px; height: 20px; padding: 0 5px; place-items: center; color: #07111e; background: #fff; border-radius: 50px; font-size: .68rem; }
+
+.hero-airport { position: relative; display: grid; min-height: min(790px, 88vh); overflow: hidden; place-items: center; isolation: isolate; background: radial-gradient(ellipse at 70% 37%, rgba(13,202,240,.16), transparent 28%), radial-gradient(ellipse at 22% 84%, rgba(42,78,132,.22), transparent 35%), linear-gradient(135deg, #07111e 5%, #0a1a2b 55%, #07111e); border-bottom: 1px solid var(--line); }
+.hero-airport::before { position: absolute; z-index: -1; right: -7%; bottom: -48%; width: min(76vw, 920px); aspect-ratio: 1; content: ""; border: 1px solid rgba(79,226,241,.16); border-radius: 50%; box-shadow: 0 0 0 45px rgba(79,226,241,.025), 0 0 0 100px rgba(79,226,241,.018); }
+.hero-grid { position: absolute; z-index: -1; inset: 0; opacity: .13; pointer-events: none; background-image: linear-gradient(rgba(167,205,228,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(167,205,228,.14) 1px, transparent 1px); background-size: 70px 70px; mask-image: linear-gradient(to bottom, transparent, #000 35%, transparent); }
+.hero-content { position: relative; z-index: 1; padding-block: 90px 70px; }
+.hero-kicker { display: flex; align-items: center; gap: 12px; color: #a6bdcb; font-size: .68rem; font-weight: 700; letter-spacing: .22em; }
+.hero-kicker span { width: 28px; height: 1px; background: var(--cyan); }
+.hero-airport h1 { max-width: 850px; margin: 24px 0 18px; color: #f5f9fc; font-family: var(--display-font); font-weight: 700; letter-spacing: -.055em; line-height: .98; }
+.hero-airport h1 span { color: var(--cyan); text-shadow: 0 8px 45px rgba(13,202,240,.15); }
+.hero-copy { max-width: 610px; color: #a8b7c7; font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.8; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.flight-strip { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 64px; color: #9fafc1; font-size: .77rem; }
+.flight-strip i { margin-right: 6px; color: var(--gold); }
+.hero-orbit { position: absolute; top: 18%; right: 13%; z-index: -1; display: grid; width: clamp(160px, 25vw, 340px); aspect-ratio: 1; place-items: center; color: rgba(79,226,241,.6); border: 1px solid rgba(79,226,241,.19); border-radius: 50%; box-shadow: inset 0 0 55px rgba(13,202,240,.05), 0 0 0 25px rgba(13,202,240,.025); transform: rotate(-12deg); }
+.hero-orbit::before, .hero-orbit::after { position: absolute; inset: 12%; content: ""; border: 1px dashed rgba(79,226,241,.2); border-radius: 50%; }
+.hero-orbit::after { inset: 27%; border-style: solid; }
+.hero-orbit span { font-family: var(--display-font); font-size: clamp(2rem, 6vw, 5rem); font-weight: 700; opacity: .36; }
+
+.section-space { padding-block: clamp(72px, 9vw, 120px); }
+.section-heading { max-width: 700px; margin: 0 auto 42px; text-align: center; }
+.eyebrow { margin: 0 0 10px; color: var(--cyan); font-size: .68rem; font-weight: 700; letter-spacing: .2em; }
+.section-title, .bolum-basligi { margin: 0; color: #f0f6fb; font-family: var(--display-font); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; letter-spacing: -.035em; }
+.section-heading > p:last-child, .form-heading > p:last-child, .tickets-heading p { margin: 12px auto 0; color: var(--muted); line-height: 1.7; }
+/* Sözde elemanlar: başlığın ilk harfi, ön eki ve son eki CSS'ten gelir. */
+.hikaye-paragrafi::first-letter { color: var(--cyan); font-size: 2.5em; font-weight: 700; }
+.bolum-basligi::before { content: "✈ "; color: var(--cyan); font-size: .65em; }
+/* AEROSİBER GÖREV 12 /görev12: Başlık sonundaki yazıyı değiştirmek için content içindeki [AERO-SİBER] metnini kendi adınla değiştir. */
+.bolum-basligi::after { content: " [AERO-SİBER]"; color: var(--gold); font-size: .34em; font-weight: 500; vertical-align: middle; }
+
+.kutu-modeli-ornek { min-height: 100%; margin: 5px; padding: 28px; background: linear-gradient(150deg, #0e2033, #0a1726); border: 1px dashed rgba(79,226,241,.48); border-radius: 16px; box-shadow: 0 18px 45px rgba(0,0,0,.2); transition: transform .24s ease, border-color .24s ease; }
+.kutu-modeli-ornek:hover { border-color: var(--cyan); transform: translateY(-5px); }
+.feature-icon { display: grid; width: 48px; height: 48px; margin-bottom: 24px; place-items: center; color: var(--cyan); background: rgba(13,202,240,.09); border: 1px solid rgba(13,202,240,.24); border-radius: 14px; }
+/* Çocuk seçici: doğrudan h3 başlığını; torun seçici: kart içindeki tüm p etiketlerini hedefler. */
+.kutu-modeli-ornek > h3 { color: #eaf5f9; font-family: var(--display-font); font-size: 1.13rem; font-weight: 600; }
+.kutu-modeli-ornek p { margin: 0; color: #9aabbd; font-size: .9rem; line-height: 1.75; }
+.crew-section { background: linear-gradient(180deg, rgba(255,255,255,.015), transparent); border-block: 1px solid var(--line); }
+.crew-status { min-height: 24px; margin-bottom: 18px; color: #8296aa; font-size: .78rem; text-align: center; }
+.crew-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+.kaptan-kart { display: inline-block; width: 236px; min-height: 300px; overflow: hidden; color: var(--text); background: linear-gradient(150deg, #10233a, #091523); border: 1px solid #203a52; border-radius: 16px; box-shadow: 0 16px 35px rgba(0,0,0,.3); text-align: center; transition: transform .25s ease, border-color .25s ease; }
+.kaptan-kart:hover { border-color: rgba(79,226,241,.75); transform: translateY(-7px); }
+.profil-ust-sablon { position: relative; height: 126px; background: radial-gradient(circle at 52% 22%, rgba(79,226,241,.38), transparent 33%), linear-gradient(135deg, #153654, #0b1929 75%); border-bottom: 1px solid rgba(79,226,241,.18); }
+/* AEROSİBER GÖREV 11 /görev11: Resim bu kapsayıcıya göre absolute konumlanır. top:55px yerine top:5px yapıp kaymayı incele. */
+.profil-yuvarlak-resim { position: absolute; z-index: 1; top: 55px; left: 70px; width: 96px; height: 96px; object-fit: cover; background: #183249; border: 4px solid #0b1725; border-radius: 50%; box-shadow: 0 0 0 2px var(--cyan); }
+.kaptan-bilgi { padding: 32px 18px 18px; }
+.kaptan-bilgi h3 { margin: 0 0 6px; color: #e9f4f8; font-family: var(--display-font); font-size: 1rem; }
+.kaptan-bilgi p { margin: 0 0 12px; color: #9fb0c1; font-size: .8rem; }
+.pilot-badge { display: inline-block; padding: 4px 9px; color: var(--gold); background: rgba(255,200,87,.08); border: 1px solid rgba(255,200,87,.17); border-radius: 99px; font-size: .67rem; }
+.crew-contact { color: var(--cyan); font-size: .79rem; text-decoration: none; }
+.crew-contact:hover { color: white; }
+
+.rules-panel { padding: clamp(24px, 5vw, 54px); background: radial-gradient(ellipse at 100% 0, rgba(13,202,240,.1), transparent 40%), #0b1827; border: 1px solid rgba(79,226,241,.2); border-radius: 20px; }
+.rules-copy { max-width: 660px; margin: 14px 0 20px; color: #9caec0; line-height: 1.75; }
+.ozel-link { display: inline-block; color: var(--cyan); font-size: .86rem; font-weight: 700; text-decoration: none; transition: transform .15s ease; }
+.ozel-link:hover { color: #fff; text-decoration: underline; }
+/* AEROSİBER GÖREV 2 /görev2: Basılı tutunca :active çalışır. Denemede color:red yerine color:lime yaz; font büyümesi aynı anda görünür. */
+.ozel-link:active { color: red; font-size: 1.2em; }
+.ticket-banner { display: flex; align-items: center; gap: 13px; padding: 18px; color: #f0f8fb; background: linear-gradient(130deg, #102b42, #0b1a2a); border: 1px solid rgba(79,226,241,.3); border-radius: 14px; text-decoration: none; transition: transform .2s ease, border-color .2s ease; }
+.ticket-banner:hover { color: #fff; border-color: var(--cyan); transform: translateY(-3px); }
+.ticket-banner-icon { display: grid; width: 44px; height: 44px; place-items: center; color: #07111e; background: var(--cyan); border-radius: 12px; }
+.ticket-banner small, .ticket-banner strong { display: block; }
+.ticket-banner small { margin-bottom: 3px; color: #8da5b8; font-size: .62rem; letter-spacing: .12em; }
+.ticket-banner strong { font-family: var(--display-font); font-size: .93rem; }
+
+.sabit-yan-menu { position: fixed; z-index: 1030; top: 41%; right: 0; display: flex; flex-direction: column; gap: 7px; }
+.yan-btn { display: grid; width: 46px; height: 46px; place-items: center; color: white; border: 1px solid rgba(255,255,255,.12); border-right: 0; border-radius: 12px 0 0 12px; text-decoration: none; transition: width .2s ease, filter .2s ease; }
+.yan-btn:hover { width: 57px; color: white; filter: brightness(1.15); }
+.yan-btn.kirmizi { background: #a82a3a; }
+.yan-btn.siyah { background: #202a34; }
+.yan-btn.mavi { background: #126d8b; }
+/* AEROSİBER GÖREV 3 /görev3: Ekrana sabit ok burada durur. Sol altı denemek için right:25px satırını left:25px yap. */
+#kaydirmaCubugu { position: fixed; z-index: 1020; right: 25px; bottom: 25px; display: grid; width: 46px; height: 46px; place-items: center; color: #07111e; background: var(--gold); border-radius: 50%; text-decoration: none; box-shadow: 0 8px 22px rgba(0,0,0,.35); transition: transform .2s ease; }
+#kaydirmaCubugu:hover { transform: translateY(-4px); }
+.site-footer { padding: 38px 0 28px; color: #8091a4; background: #040a11; border-top: 1px solid var(--line); text-align: center; }
+.footer-brand { color: var(--cyan); font-family: var(--display-font); font-weight: 700; letter-spacing: .16em; text-decoration: none; }
+.footer-brand span { color: #f4f8fb; }
+.site-footer p { margin: 7px 0; color: #a0adba; font-size: .83rem; }
+.site-footer small { font-size: .72rem; }
+
+.form-page { max-width: 970px; padding-top: 62px; padding-bottom: 90px; }
+.form-heading { margin-bottom: 30px; text-align: center; }
+.form-heading > p:last-child { max-width: 600px; }
+.privacy-note { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 24px; padding: 15px 17px; color: #b7c4cf; background: rgba(255,200,87,.045); border: 1px solid rgba(255,200,87,.17); border-radius: 12px; font-size: .79rem; line-height: 1.65; }
+.privacy-note i { margin-top: 3px; color: var(--gold); }
+.booking-form { display: grid; gap: 18px; }
+.ozel-fieldset { min-width: 0; padding: clamp(20px, 4vw, 32px); background: linear-gradient(145deg, #0d1c2d, #0a1522); border: 1px solid #22364b; border-radius: 16px; }
+.ozel-fieldset legend { float: none; width: auto; margin-bottom: 15px; padding: 0 9px 0 0; color: #dcebf2; font-family: var(--display-font); font-size: 1.03rem; font-weight: 600; }
+.fieldset-number { display: inline-grid; width: 30px; height: 30px; margin-right: 5px; place-items: center; color: #06121e; background: var(--cyan); border-radius: 50%; font-family: var(--body-font); font-size: .72rem; }
+.form-label { margin-bottom: 8px; color: #d9e3ec; font-size: .82rem; }
+.required-mark { color: #ff8c8c; }
+.form-hint { display: block; margin-top: 6px; color: #8496a9; font-size: .69rem; }
+.siber-input { min-height: 45px; color: #eff6fa !important; background-color: #101d2b !important; border: 1px solid #314457 !important; }
+.siber-input::placeholder { color: #73869a; }
+/* AEROSİBER GÖREV 10 /görev10: Tıklanan kutunun odağı burada renklendirilir. border-color ve gölgeyi #ff007f yapıp neon pembeyi dene. */
+.siber-input:focus { color: #fff !important; background-color: #142437 !important; border-color: var(--gold) !important; box-shadow: 0 0 0 .22rem rgba(255,200,87,.16) !important; }
+.siber-input:valid:not(:placeholder-shown) { border-color: rgba(60,190,140,.62) !important; }
+.siber-input:invalid:not(:placeholder-shown) { border-color: rgba(244,104,113,.68) !important; }
+.siber-input option, .siber-input optgroup { color: #eff6fa; background: #101d2b; }
+.siber-input[type="color"] { height: 45px; padding: 5px; }
+.form-range { accent-color: var(--cyan); }
+.choice-chip { display: inline-flex; align-items: center; gap: 7px; margin: 4px 5px 4px 0; padding: 8px 11px; color: #c0ccd8; background: #101e2d; border: 1px solid #273a4d; border-radius: 99px; font-size: .75rem; cursor: pointer; }
+.choice-chip:has(input:checked) { color: #eaf9fb; border-color: rgba(79,226,241,.6); background: rgba(13,202,240,.08); }
+.choice-chip input { accent-color: var(--cyan); }
+.form-status { min-height: 1px; color: #b7d8c6; font-size: .82rem; }
+.form-status:not(:empty) { padding: 11px 14px; background: rgba(40,130,87,.12); border: 1px solid rgba(74,185,129,.25); border-radius: 9px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.form-actions .btn:first-child { flex: 1 1 270px; }
+
+.tickets-page { min-height: 70vh; padding-top: 65px; padding-bottom: 90px; }
+.tickets-heading { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 30px; }
+.tickets-heading p { margin-inline: 0; }
+.ticket-progress { max-width: 880px; margin: 0 auto 30px; padding: 22px; background: radial-gradient(ellipse at 95% 0, rgba(13,202,240,.1), transparent 40%), #0c1a29; border: 1px solid rgba(79,226,241,.28); border-radius: 14px; }
+.ticket-progress h2 { margin: 0; color: #d6e7f0; font-family: var(--display-font); font-size: 1.05rem; }
+.ticket-progress p { margin: 4px 0 0; color: #8fa1b4; font-size: .76rem; }
+.ticket-progress strong { color: var(--cyan); font-family: var(--display-font); font-size: 1.25rem; }
+.ticket-progress progress { display: block; width: 100%; height: 12px; margin-top: 17px; overflow: hidden; appearance: none; border: 0; border-radius: 99px; background: #233446; }
+.ticket-progress progress::-webkit-progress-bar { background: #233446; border-radius: 99px; }
+.ticket-progress progress::-webkit-progress-value { background: linear-gradient(90deg, #147d98, var(--cyan)); border-radius: 99px; }
+.ticket-progress progress::-moz-progress-bar { background: linear-gradient(90deg, #147d98, var(--cyan)); border-radius: 99px; }
+.ticket-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+.empty-tickets { grid-column: 1/-1; padding: 46px 20px; background: #0b1725; border: 1px dashed #34485c; border-radius: 16px; text-align: center; }
+.empty-tickets > i { color: var(--cyan); font-size: 2rem; }
+.empty-tickets h2 { margin: 13px 0 7px; color: #e7f2f7; font-family: var(--display-font); font-size: 1.2rem; }
+.empty-tickets p { color: #93a4b7; font-size: .84rem; }
+.binis-karti { position: relative; min-width: 0; overflow: hidden; padding: 24px; background: linear-gradient(140deg, #102136, #091522); border: 1px solid #2a4158; border-left: 9px solid var(--ticket-color, var(--cyan)); border-radius: 16px; box-shadow: 0 13px 34px rgba(0,0,0,.23); }
+.binis-karti::after { position: absolute; right: -46px; bottom: -52px; width: 160px; height: 160px; content: ""; border: 1px solid rgba(255,255,255,.07); border-radius: 50%; box-shadow: 0 0 0 18px rgba(255,255,255,.018), 0 0 0 38px rgba(255,255,255,.012); pointer-events: none; }
+.onay-damgasi { position: absolute; top: 16px; right: 16px; padding: 4px 9px; color: #74dfb0; border: 1px dashed #42b984; border-radius: 5px; font-size: .62rem; font-weight: 700; letter-spacing: .08em; transform: rotate(-5deg); }
+.ticket-route { max-width: 78%; margin: 12px 0 5px; color: #e7f3f8; font-family: var(--display-font); font-size: 1.08rem; font-weight: 700; }
+.ticket-subtitle { color: #a0afbe; font-size: .75rem; }
+.ticket-meta { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin: 17px 0; padding: 13px; background: rgba(3,10,18,.48); border: 1px dashed #314357; border-radius: 9px; }
+.ticket-meta span { display: block; color: #7f92a5; font-size: .65rem; }
+.ticket-meta strong { display: block; margin-top: 3px; overflow-wrap: anywhere; color: #e3eef4; font-size: .78rem; }
+.ticket-bag { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 5px; color: #a6b6c5; font-size: .72rem; }
+.ticket-bag strong { color: #e4edf2; }
+.binis-karti meter { display: block; width: 100%; height: 10px; accent-color: var(--ticket-color, var(--cyan)); }
+.ticket-actions { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 17px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+.ticket-actions a { color: #aebdca; font-size: .75rem; text-decoration: none; }
+.ticket-actions a:hover { color: #fff; }
+.ticket-actions button { color: #ff9197; background: transparent; border: 1px solid rgba(255,100,110,.35); border-radius: 7px; padding: 6px 9px; font-size: .7rem; }
+.ticket-actions button:hover { color: #fff; background: #9d2932; }
+
+@media (max-width: 767.98px) {
+  .hero-airport { min-height: min(760px, 84vh); }
+  .hero-orbit { top: 13%; right: -12%; opacity: .55; }
+  .flight-strip { margin-top: 45px; }
+  .sabit-yan-menu { top: auto; right: 12px; bottom: 14px; flex-direction: row; }
+  .yan-btn { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.17); border-radius: 50%; }
+  .ticket-grid { grid-template-columns: 1fr; }
+  .tickets-heading { align-items: start; flex-direction: column; }
+  #kaydirmaCubugu { right: 12px; bottom: 68px; width: 40px; height: 40px; }
+}
+@media (max-width: 575.98px) {
+  .anma-bari { font-size: .7rem; }
+  .anma-bari small { flex-basis: 100%; text-align: center; }
+  .hero-content { padding-block: 74px 58px; }
+  .hero-airport h1 { font-size: clamp(2.6rem, 13vw, 4rem); }
+  .hero-kicker { gap: 7px; font-size: .58rem; letter-spacing: .13em; }
+  .hero-kicker span { width: 17px; }
+  .hero-actions { display: grid; }
+  .flight-strip { display: grid; gap: 11px; }
+  .form-actions { display: grid; }
+  .form-actions .btn { width: 100%; }
+  .ticket-meta { gap: 9px 6px; padding: 10px; }
+  .binis-karti { padding: 20px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111e">
+  <meta name="description" content="AeroSiber ile uçuş planla, dijital biniş kartını oluştur ve mürettebatı tanı.">
+  <title>AeroSiber | Gökyüzüne Açılan Rota</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="sayfaBasi">
+  <div class="anma-bari"><i class="fa-solid fa-infinity" aria-hidden="true"></i><span>“İstikbal göklerdedir.”</span><small>Mustafa Kemal Atatürk'ü saygı ve özlemle anıyoruz.</small></div>
+
+  <div class="sabit-yan-menu" role="group" aria-label="Hızlı iletişim">
+    <!-- AEROSİBER GÖREV 1 /görev1: E-posta konu başlığını değiştirmek için subject= sonrasındaki metni düzenle; boşlukları %20 yaz. -->
+    <a href="mailto:destek@aerosiber.com?subject=Acil%20Ucus%20Destegi" class="yan-btn kirmizi" title="E-posta gönder" aria-label="AeroSiber desteğe e-posta gönder"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+    <a href="tel:+908502220000" class="yan-btn siyah" title="Çağrı merkezini ara" aria-label="Çağrı merkezini ara"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+    <a href="https://www.shgm.gov.tr" target="_blank" rel="noopener noreferrer" class="yan-btn mavi" title="Sivil Havacılık Genel Müdürlüğü" aria-label="SHGM sitesini yeni sekmede aç"><i class="fa-solid fa-plane-up" aria-hidden="true"></i></a>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark airport-nav sticky-top" aria-label="Ana gezinme">
+    <div class="container">
+      <a class="navbar-brand aero-brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>AERO<span class="brand-light">SİBER</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="anaMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#avantajlar">Avantajlar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kaptanlar">Mürettebat</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bagaj-kurallari">Bagaj kuralları</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-info btn-sm" href="rezervasyon.html?cikis=Zonguldak%20%C3%87aycuma%20(ONQ)&kampanya=ilk-yolculuk"><i class="fa-solid fa-ticket me-1" aria-hidden="true"></i>Bilet al</a></li>
+          <li class="nav-item"><a class="btn btn-info btn-sm fw-bold text-dark" href="biletlerim.html"><i class="fa-solid fa-passport me-1" aria-hidden="true"></i>Biniş kartlarım <span class="nav-counter" id="biletSayaci">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-airport">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="hero-kicker"><span></span> ZONGULDAK'TAN DÜNYAYA <span></span></p>
+      <h1 class="display-2">Rotanı seç.<br><span>Gökyüzü senin.</span></h1>
+      <p class="hero-copy">Akıllı rezervasyon, kişisel biniş kartı ve teknolojiyle güçlenen bir uçuş deneyimi. İlk rotanı AeroSiber ile planla.</p>
+      <div class="hero-actions">
+        <a class="btn btn-info btn-lg fw-bold text-dark" href="rezervasyon.html?cikis=Zonguldak%20%C3%87aycuma%20(ONQ)&kampanya=ilk-yolculuk"><i class="fa-solid fa-calendar-check me-2" aria-hidden="true"></i>Uçuş planla</a>
+        <a class="btn btn-outline-light btn-lg" href="#kaptanlar"><i class="fa-solid fa-arrow-down me-2" aria-hidden="true"></i>Mürettebatı tanı</a>
+      </div>
+      <div class="flight-strip" aria-label="Uçuş bilgileri">
+        <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Güvenli rezervasyon</span>
+        <span><i class="fa-solid fa-bolt" aria-hidden="true"></i> Anında biniş kartı</span>
+        <span><i class="fa-solid fa-suitcase" aria-hidden="true"></i> Akıllı bagaj takibi</span>
+      </div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true"><span>AS</span></div>
+  </header>
+
+  <main>
+    <section id="avantajlar" class="container section-space" aria-labelledby="avantajBaslik">
+      <div class="section-heading">
+        <p class="eyebrow">YOLCULUĞUN YENİ HALİ</p>
+        <h2 id="avantajBaslik" class="bolum-basligi">Neden AeroSiber?</h2>
+        <p>Konfor, güvenlik ve akıllı teknolojiyi tek bir biniş kartında buluşturduk.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4"><article class="kutu-modeli-ornek"><span class="feature-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></span><h3>Süpersonik planlama</h3><p>Rotanı birkaç adımda seç, uçuş bilgilerini tek bir dijital kartta topla.</p></article></div>
+        <div class="col-md-4"><article class="kutu-modeli-ornek"><span class="feature-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span><h3>Güvenli yolculuk</h3><p>Form doğrulaması ve anlaşılır bilet bilgileriyle her aşamayı kontrol et.</p></article></div>
+        <div class="col-md-4"><article class="kutu-modeli-ornek"><span class="feature-icon"><i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i></span><h3>Akıllı bagaj</h3><p><code>meter</code> ve <code>progress</code> göstergeleriyle bagaj ağırlığını izle.</p></article></div>
+      </div>
+    </section>
+
+    <section id="kaptanlar" class="crew-section section-space" aria-labelledby="kaptanBaslik">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">KOKPİT EKİBİ</p>
+          <h2 id="kaptanBaslik" class="bolum-basligi">Kaptan pilotlarımız</h2>
+          <p>Örnek ekip bilgileri bir API'den yüklenir; bağlantı yoksa yedek ekip kartları gösterilir.</p>
+        </div>
+        <div id="kaptanDurumu" class="crew-status" role="status" aria-live="polite">Mürettebat bilgileri yükleniyor…</div>
+        <div id="kaptan-listesi" class="crew-grid"></div>
+      </div>
+    </section>
+
+    <section id="bagaj-kurallari" class="container section-space">
+      <div class="rules-panel">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <p class="eyebrow">UÇUŞ ÖNCESİ HAZIRLIK</p>
+            <h2 class="section-title">Bagaj kurallarını gözden geçir</h2>
+            <p class="rules-copy">Kabin bagajını hazırlamadan önce kısa kurallar kitapçığını indir. Resmî havacılık duyurularını SHGM bağlantısından ayrıca inceleyebilirsin.</p>
+            <a href="bagaj-kurallari.txt" download class="ozel-link me-3"><i class="fa-solid fa-file-arrow-down me-2" aria-hidden="true"></i>Kurallar kitapçığını indir</a>
+            <a href="mailto:kayipbagaj@aerosiber.com?subject=Kayip%20Bagaj%20Bildirimi" class="ozel-link"><i class="fa-solid fa-suitcase-rolling me-2" aria-hidden="true"></i>Kayıp bagaj bildir</a>
+          </div>
+          <div class="col-lg-4">
+            <!-- Resim yerine çizilmiş bilet görseli de bağlantı olabilir; tıklayınca form açılır. -->
+            <a class="ticket-banner" href="rezervasyon.html?kampanya=bagaj-bolumu" title="Rezervasyon formunu aç">
+              <span class="ticket-banner-icon"><i class="fa-solid fa-ticket" aria-hidden="true"></i></span><span><small>YENİ ROTA</small><strong>Biletini oluştur</strong></span><i class="fa-solid fa-arrow-right ms-auto" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- AEROSİBER GÖREV 3 /görev3: Ok simgesinin konumunu style.css içindeki #kaydirmaCubugu kuralında değiştir. right:25px yerine left:25px deneyebilirsin. -->
+  <a href="#sayfaBasi" id="kaydirmaCubugu" aria-label="Sayfanın başına dön" title="Yukarı çık"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+  <footer class="site-footer"><div class="container"><a class="footer-brand" href="index.html">AERO<span>SİBER</span></a><p>Gökyüzünde güvenli, ekranda akıllı.</p><small>© 2026 AeroSiber · Eğitim amaçlı uçuş rezervasyon demosu</small></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

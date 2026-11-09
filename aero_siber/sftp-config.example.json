@@ -1,0 +1,15 @@
+{
+  "name": "AeroSiber eğitim sitesi",
+  "host": "SFTP_SUNUCU_ADRESINI_YAZ",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "KULLANICI_ADINI_YAZ",
+  "remotePath": "/htdocs/hafta9_aerosiber",
+  "uploadOnSave": false,
+  "ignore": [
+    ".vscode/**",
+    ".git/**",
+    "README.md",
+    "sftp-config.example.json"
+  ]
+}
