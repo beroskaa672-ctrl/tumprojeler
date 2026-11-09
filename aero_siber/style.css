@@ -92,7 +92,7 @@ a { color: inherit; }
 .ozel-link:active { color: red; font-size: 1.2em; }
 .ticket-banner { display: flex; align-items: center; gap: 13px; padding: 18px; color: #f0f8fb; background: linear-gradient(130deg, #102b42, #0b1a2a); border: 1px solid rgba(79,226,241,.3); border-radius: 14px; text-decoration: none; transition: transform .2s ease, border-color .2s ease; }
 .ticket-banner:hover { color: #fff; border-color: var(--cyan); transform: translateY(-3px); }
-.ticket-banner-icon { display: grid; width: 44px; height: 44px; place-items: center; color: #07111e; background: var(--cyan); border-radius: 12px; }
+.ticket-banner-image { flex: 0 0 66px; width: 66px; height: 66px; object-fit: contain; }
 .ticket-banner small, .ticket-banner strong { display: block; }
 .ticket-banner small { margin-bottom: 3px; color: #8da5b8; font-size: .62rem; letter-spacing: .12em; }
 .ticket-banner strong { font-family: var(--display-font); font-size: .93rem; }

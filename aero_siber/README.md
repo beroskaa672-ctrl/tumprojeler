@@ -9,6 +9,7 @@
 - `biletlerim.html`: `localStorage` kayıtları, biniş kartı, `meter` ve `progress` göstergeleri.
 - `style.css`: sözde sınıflar/elemanlar, çocuk-torun seçicileri, kutu modeli ve konumlandırma örnekleri.
 - `app.js`: örnek mürettebat API'si, form yakalama, tarayıcıda bilet kaydetme ve kartları çizme.
+- `bilet-banner.svg`: rezervasyon formuna giden resim bağlantısında kullanılan yerel çizim.
 - `sftp-config.example.json`: kendi sunucu adresin ve kullanıcı bilgilerinle yerel SFTP ayarına uyarlayacağın örnek.
 
 ## Görevleri kodda bulma

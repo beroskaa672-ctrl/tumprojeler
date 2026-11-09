@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">AeroSiber biniş kartı</title>
+  <desc id="desc">Turkuaz kanatlı, koyu mavi bir dijital biniş kartı çizimi.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153652"/>
+      <stop offset="1" stop-color="#081827"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#76f4fb"/>
+      <stop offset="1" stop-color="#13b9d3"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="73" fill="#0b1b2b" stroke="#33556e" stroke-width="2"/>
+  <path d="M27 45h74a12 12 0 0 1 12 12v48a12 12 0 0 1-12 12H27a12 12 0 0 1-12-12V57a12 12 0 0 1 12-12Z" fill="url(#panel)" stroke="#4fe2f1" stroke-width="3"/>
+  <path d="M113 58h15v47h-15M116 65h12M116 76h12M116 87h12M116 98h12" fill="none" stroke="#ffc857" stroke-width="3" stroke-dasharray="4 4"/>
+  <path d="m42 83 44-24-12 20 22 8-55 10 13-12Z" fill="url(#wing)" stroke="#d7ffff" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M29 55h35" stroke="#9cb5c8" stroke-linecap="round" stroke-width="4"/>
+  <path d="M30 103h20" stroke="#ffc857" stroke-linecap="round" stroke-width="4"/>
+  <circle cx="128" cy="40" r="5" fill="#4fe2f1"/>
+</svg>
